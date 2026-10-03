@@ -37,3 +37,7 @@ Routes: `#/`, `#/work`, `#/work/the-courtyard-house`, `#/work/a-place-to-gather`
 The brief form previews and downloads a UTF-8 text file on the current device. No server, sending endpoint, contact field, analytics or form-data storage. Only the animation preference uses localStorage (`strata-motion`).
 
 Read `DESIGN.md` for direction and `HANDOFF.md` for verification. Fictional concepts and generated imagery are not evidence of real commissions.
+
+## Interactive study
+
+![Original Three.js architectural study](docs/media/interaction.webp)

@@ -1,3 +1,9 @@
+# Current release — 3 October 2026
+
+**Complete, public and live:** [STRATA](https://19-strata.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/19-strata). All 68 local browser checks and 14 live asset hashes passed; desktop and phone live checks were clean. Exact application commit, Cloudflare version, limits and maintenance commands are in [docs/RELEASE.md](docs/RELEASE.md). Documentation commits after this release do not change its application identity.
+
+## Earlier implementation handoff (historical)
+
 # STRATA implementation handoff — 3 October 2026
 
 ## Implemented

@@ -1,0 +1,189 @@
+{
+  "base": "https://19-strata.williamking.workers.dev",
+  "checkedAt": "2026-10-03T15:13:47.995Z",
+  "files": [
+    {
+      "path": "/404.html",
+      "status": 200,
+      "matched": true,
+      "bytes": 345
+    },
+    {
+      "path": "/assets/index-BUddRkCR.js",
+      "status": 200,
+      "matched": true,
+      "bytes": 902136
+    },
+    {
+      "path": "/assets/index-D-o0cxx6.css",
+      "status": 200,
+      "matched": true,
+      "bytes": 41613
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "matched": true,
+      "bytes": 177
+    },
+    {
+      "path": "/fonts/manrope-latin.woff2",
+      "status": 200,
+      "matched": true,
+      "bytes": 24836
+    },
+    {
+      "path": "/fonts/OFL-Manrope.txt",
+      "status": 200,
+      "matched": true,
+      "bytes": 4387
+    },
+    {
+      "path": "/images/strata-gather-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 53374
+    },
+    {
+      "path": "/images/strata-gather.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 215392
+    },
+    {
+      "path": "/images/strata-interior-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 52590
+    },
+    {
+      "path": "/images/strata-interior.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 254136
+    },
+    {
+      "path": "/images/strata-workspace-mobile.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 58126
+    },
+    {
+      "path": "/images/strata-workspace.webp",
+      "status": 200,
+      "matched": true,
+      "bytes": 259402
+    },
+    {
+      "path": "/index.html",
+      "status": 200,
+      "matched": true,
+      "bytes": 821
+    },
+    {
+      "path": "/release.json",
+      "status": 200,
+      "matched": true,
+      "bytes": 132
+    }
+  ],
+  "errors": [],
+  "notFoundStatus": 404,
+  "release": {
+    "project": "19-strata",
+    "sourceCommit": "ac1dfa25ddecf78d28147d2d50c7bbda0e05a3f3",
+    "builtAt": "2026-10-03T15:11:29.902Z"
+  },
+  "desktop": {
+    "title": "STRATA — Good spaces. Great surfaces.",
+    "overflow": false,
+    "resources": [
+      {
+        "name": "/fonts/manrope-latin.woff2",
+        "encoded": 24836,
+        "transfer": 25136
+      },
+      {
+        "name": "/assets/index-BUddRkCR.js",
+        "encoded": 260955,
+        "transfer": 261255
+      },
+      {
+        "name": "/assets/index-D-o0cxx6.css",
+        "encoded": 10842,
+        "transfer": 11142
+      },
+      {
+        "name": "/images/strata-gather.webp",
+        "encoded": 215392,
+        "transfer": 215692
+      },
+      {
+        "name": "/images/strata-interior.webp",
+        "encoded": 254136,
+        "transfer": 254436
+      },
+      {
+        "name": "/favicon.svg",
+        "encoded": 153,
+        "transfer": 453
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 252
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 572
+      }
+    ]
+  },
+  "phone": {
+    "title": "STRATA — Good spaces. Great surfaces.",
+    "overflow": false,
+    "resources": [
+      {
+        "name": "/fonts/manrope-latin.woff2",
+        "encoded": 24836,
+        "transfer": 25136
+      },
+      {
+        "name": "/assets/index-BUddRkCR.js",
+        "encoded": 260955,
+        "transfer": 261255
+      },
+      {
+        "name": "/assets/index-D-o0cxx6.css",
+        "encoded": 10842,
+        "transfer": 11142
+      },
+      {
+        "name": "/images/strata-interior-mobile.webp",
+        "encoded": 52590,
+        "transfer": 52890
+      },
+      {
+        "name": "/images/strata-gather-mobile.webp",
+        "encoded": 53374,
+        "transfer": 53674
+      },
+      {
+        "name": "/favicon.svg",
+        "encoded": 153,
+        "transfer": 453
+      }
+    ],
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 176
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 364
+      }
+    ]
+  }
+}
