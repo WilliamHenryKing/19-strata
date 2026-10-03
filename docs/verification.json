@@ -1,0 +1,493 @@
+{
+  "slug": "19-strata",
+  "base": "http://127.0.0.1:4629",
+  "date": "2026-10-03T14:57:11.329Z",
+  "checks": [
+    {
+      "name": "1440 #/ no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/ images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/ single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/ axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/work single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "1440 #/materials no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/materials images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/materials single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/studio no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/studio images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/studio single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/brief no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/brief images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/brief single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work/the-courtyard-house no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work/the-courtyard-house images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/work/the-courtyard-house single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work/a-place-to-gather no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work/a-place-to-gather images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/work/a-place-to-gather single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work/the-quiet-corner no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440 #/work/the-quiet-corner images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "1440 #/work/the-quiet-corner single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/ no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/ images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/ single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/ axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "390 #/work no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/work images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/work single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/work axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "390 #/materials no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/materials images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/materials single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/studio no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/studio images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/studio single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/brief no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/brief images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/brief single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/work/the-courtyard-house no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/work/the-courtyard-house images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/work/the-courtyard-house single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/work/a-place-to-gather no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/work/a-place-to-gather images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/work/a-place-to-gather single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "390 #/work/the-quiet-corner no overflow",
+      "pass": true
+    },
+    {
+      "name": "390 #/work/the-quiet-corner images loaded",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "390 #/work/the-quiet-corner single nonempty heading",
+      "pass": true
+    },
+    {
+      "name": "Gallery filter selects",
+      "pass": true
+    },
+    {
+      "name": "Filtered gallery retains a project",
+      "pass": true
+    },
+    {
+      "name": "Brief downloads text file",
+      "pass": true
+    },
+    {
+      "name": "Brief includes selected choices",
+      "pass": true
+    },
+    {
+      "name": "Brief confirms local demo",
+      "pass": true
+    },
+    {
+      "name": "Phone menu opens",
+      "pass": true
+    },
+    {
+      "name": "mobile menu axe A/AA",
+      "pass": true
+    },
+    {
+      "name": "Escape closes phone menu",
+      "pass": true
+    },
+    {
+      "name": "Phone menu navigation changes route",
+      "pass": true
+    },
+    {
+      "name": "Phone menu closes after navigation",
+      "pass": true
+    },
+    {
+      "name": "Reduced-motion home remains readable",
+      "pass": true
+    },
+    {
+      "name": "Material Clay plaster selected",
+      "pass": true
+    },
+    {
+      "name": "Material Smoked walnut selected",
+      "pass": true
+    },
+    {
+      "name": "Material Brushed metal selected",
+      "pass": true
+    },
+    {
+      "name": "Unknown hash route is handled",
+      "pass": true
+    },
+    {
+      "name": "No browser/network errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "routes": [
+    {
+      "width": 1440,
+      "route": "#/",
+      "title": "STRATA — Good spaces. Great surfaces.",
+      "headings": ["Good spaces.Great surfaces."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/work",
+      "title": "STRATA — Selected projects",
+      "headings": ["Built ongood ideas."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/materials",
+      "title": "STRATA — The material library",
+      "headings": ["Feel thedifference."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/studio",
+      "title": "STRATA — The studio",
+      "headings": ["The finishis the feeling."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/brief",
+      "title": "STRATA — Build your project brief",
+      "headings": ["Let's give itsome shape."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/work/the-courtyard-house",
+      "title": "STRATA — The Courtyard House",
+      "headings": ["The Courtyard House"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/work/a-place-to-gather",
+      "title": "STRATA — A Place to Gather",
+      "headings": ["A Place to Gather"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "#/work/the-quiet-corner",
+      "title": "STRATA — The Quiet Corner",
+      "headings": ["The Quiet Corner"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/",
+      "title": "STRATA — Good spaces. Great surfaces.",
+      "headings": ["Good spaces.Great surfaces."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/work",
+      "title": "STRATA — Selected projects",
+      "headings": ["Built ongood ideas."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/materials",
+      "title": "STRATA — The material library",
+      "headings": ["Feel thedifference."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/studio",
+      "title": "STRATA — The studio",
+      "headings": ["The finishis the feeling."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/brief",
+      "title": "STRATA — Build your project brief",
+      "headings": ["Let's give itsome shape."],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/work/the-courtyard-house",
+      "title": "STRATA — The Courtyard House",
+      "headings": ["The Courtyard House"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/work/a-place-to-gather",
+      "title": "STRATA — A Place to Gather",
+      "headings": ["A Place to Gather"],
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "#/work/the-quiet-corner",
+      "title": "STRATA — The Quiet Corner",
+      "headings": ["The Quiet Corner"],
+      "broken": [],
+      "overflow": false
+    }
+  ],
+  "accessibility": [
+    {
+      "name": "1440 #/",
+      "violations": []
+    },
+    {
+      "name": "1440 #/work",
+      "violations": []
+    },
+    {
+      "name": "390 #/",
+      "violations": []
+    },
+    {
+      "name": "390 #/work",
+      "violations": []
+    },
+    {
+      "name": "mobile menu",
+      "violations": []
+    }
+  ],
+  "diagnostics": [
+    {
+      "ready": true,
+      "fallback": false,
+      "frames": 6,
+      "active": false,
+      "visible": true,
+      "material": "aluminium",
+      "motion": false,
+      "dpr": 1,
+      "geometries": 17,
+      "textures": 8,
+      "drawCalls": 33,
+      "triangles": 21306,
+      "disposed": false,
+      "pose": {
+        "rotation": 0.06000000000000005,
+        "lift": 0.42999999999999994,
+        "spread": 0.55
+      }
+    },
+    {
+      "ready": true,
+      "fallback": false,
+      "frames": 6,
+      "active": false,
+      "visible": false,
+      "material": "aluminium",
+      "motion": false,
+      "dpr": 1,
+      "geometries": 17,
+      "textures": 8,
+      "drawCalls": 33,
+      "triangles": 21306,
+      "disposed": false,
+      "pose": {
+        "rotation": 0.06000000000000005,
+        "lift": 0.42999999999999994,
+        "spread": 0.55
+      }
+    }
+  ],
+  "browser": "154.0.8037.97",
+  "reducedMotionControl": "Motion off"
+}

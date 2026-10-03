@@ -1,0 +1,185 @@
+{
+  "slug": "19-strata",
+  "port": "4629",
+  "browser": "154.0.8037.97",
+  "errors": [],
+  "views": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "h1": ["Good spaces.Great surfaces."]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "h1": ["Good spaces.Great surfaces."]
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "h1": ["Good spaces.Great surfaces."]
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "h1": ["Good spaces.Great surfaces."]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false,
+      "h1": ["Good spaces.Great surfaces."]
+    }
+  ],
+  "axe": [],
+  "links": [
+    {
+      "text": "STRATA+",
+      "href": "#/"
+    },
+    {
+      "text": "Projects 03",
+      "href": "#/work"
+    },
+    {
+      "text": "Materials",
+      "href": "#/materials"
+    },
+    {
+      "text": "Studio",
+      "href": "#/studio"
+    },
+    {
+      "text": "Let's talk ↗",
+      "href": "#/brief"
+    },
+    {
+      "text": "Explore our work ↗",
+      "href": "#/work"
+    },
+    {
+      "text": "Every layerhas a story.↘",
+      "href": "#/materials"
+    },
+    {
+      "text": "Inside the studio ↗",
+      "href": "#/studio"
+    },
+    {
+      "text": "All projects 03 ↗",
+      "href": "#/work"
+    },
+    {
+      "text": "↗Concept 202601 / Residential / full interiorThe Courtyard House+",
+      "href": "#/work/the-courtyard-house"
+    },
+    {
+      "text": "↗Concept 202602 / Hospitality / material studyA Place to Gather+",
+      "href": "#/work/a-place-to-gather"
+    },
+    {
+      "text": "Enter the material library ↗",
+      "href": "#/materials"
+    },
+    {
+      "text": "Tactile / honest / expressiveTouch& feel ↗",
+      "href": "#/materials"
+    },
+    {
+      "text": "Build yourproject brief↗",
+      "href": "#/brief"
+    },
+    {
+      "text": "Projects",
+      "href": "#/work"
+    },
+    {
+      "text": "Materials",
+      "href": "#/materials"
+    },
+    {
+      "text": "Studio",
+      "href": "#/studio"
+    },
+    {
+      "text": "Project brief",
+      "href": "#/brief"
+    },
+    {
+      "text": "Back to the beginning ↗",
+      "href": "#/"
+    },
+    {
+      "text": "STRATA+",
+      "href": "#/"
+    }
+  ],
+  "controls": [
+    {
+      "tag": "BUTTON",
+      "text": "Skip to content",
+      "label": null,
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Menu +",
+      "label": null,
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Motion on",
+      "label": "Motion on. Pause animations.",
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "01Travertine",
+      "label": "Explore Travertine",
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "02Clay plaster",
+      "label": "Explore Clay plaster",
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "03Smoked walnut",
+      "label": "Explore Smoked walnut",
+      "type": "button"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "04Brushed metal",
+      "label": "Explore Brushed metal",
+      "type": "button"
+    }
+  ],
+  "diagnostics": {
+    "ready": true,
+    "fallback": false,
+    "frames": 340,
+    "active": false,
+    "visible": true,
+    "material": "travertine",
+    "motion": true,
+    "dpr": 1,
+    "geometries": 17,
+    "textures": 8,
+    "drawCalls": 33,
+    "triangles": 21306,
+    "disposed": false,
+    "pose": {
+      "rotation": -0.26,
+      "lift": 9.671069975392982e-9,
+      "spread": 4.835534987696491e-9
+    }
+  }
+}

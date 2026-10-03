@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "name": "OS reduced motion overrides saved on",
+      "pass": true
+    },
+    {
+      "name": "Direct walnut brief preserves selection",
+      "pass": true
+    },
+    {
+      "name": "Blank required brief fields block",
+      "pass": true
+    },
+    {
+      "name": "No-WebGL content remains readable",
+      "pass": true
+    },
+    {
+      "name": "No-WebGL shows designed fallback",
+      "pass": true
+    }
+  ],
+  "metrics": {
+    "initialEncodedBytes": 391298
+  }
+}
