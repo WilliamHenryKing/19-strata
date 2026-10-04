@@ -1,10 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
 import { type MaterialId, materials } from "./data";
 
 type SceneControls = { select: (id: MaterialId) => void; motion: (enabled: boolean) => void };
+export type CameraTravel = {
+  progress: number;
+  wake?: () => void;
+  onAvailability?: (available: boolean) => void;
+};
 type Diagnostics = {
   ready: boolean;
   fallback: boolean;
@@ -20,6 +25,12 @@ type Diagnostics = {
   triangles: number;
   disposed: boolean;
   pose: { rotation: number; lift: number; spread: number };
+  camera: {
+    position: number[];
+    target: number[];
+    progress: number;
+    projection: "perspective" | "orthographic";
+  };
 };
 declare global {
   interface Window {
@@ -109,20 +120,23 @@ export function MaterialScene({
   selected,
   motion,
   compact = false,
+  travel,
 }: {
   selected: MaterialId;
   motion: boolean;
   compact?: boolean;
+  travel?: RefObject<CameraTravel>;
 }) {
   const host = useRef<HTMLDivElement>(null);
   const controls = useRef<SceneControls | null>(null);
-  const initial = useRef({ selected, motion });
+  const initial = useRef({ selected, motion, travel });
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     const element = host.current;
     if (!element) return;
+    const travelState = initial.current.travel?.current;
     let renderer: THREE.WebGLRenderer;
     const diag: Diagnostics = {
       ready: false,
@@ -139,6 +153,12 @@ export function MaterialScene({
       triangles: 0,
       disposed: false,
       pose: { rotation: -0.26, lift: 0, spread: 0 },
+      camera: {
+        position: [6, 3.45, 9],
+        target: [0, 0, 0],
+        progress: 0,
+        projection: travelState ? "perspective" : "orthographic",
+      },
     };
     window.__STRATA_DIAGNOSTICS__ = diag;
     try {
@@ -149,6 +169,7 @@ export function MaterialScene({
       });
     } catch {
       diag.fallback = true;
+      travelState?.onAvailability?.(false);
       setFailed(true);
       return;
     }
@@ -163,16 +184,51 @@ export function MaterialScene({
     element.appendChild(renderer.domElement);
     renderer.domElement.setAttribute("aria-hidden", "true");
     const scene = new THREE.Scene();
-    const camera = new THREE.OrthographicCamera(-4, 4, 4, -4, 0.1, 40);
+    const camera = travelState
+      ? new THREE.PerspectiveCamera(32, 1, 0.08, 60)
+      : new THREE.OrthographicCamera(-4, 4, 4, -4, 0.1, 40);
     camera.position.set(6, 3.45, 9);
     camera.lookAt(0, 0.0, 0);
-    const environment = new RoomEnvironment();
-    const pmrem = new THREE.PMREMGenerator(renderer);
-    const environmentTarget = pmrem.fromScene(environment, 0.04);
+    // The sculpture stays put. Independent spatial curves move the actual camera
+    // and its gaze, from a full assembly through the arch to the walnut arris.
+    const positionPath = new THREE.CatmullRomCurve3(
+      [
+        new THREE.Vector3(6, 3.45, 9),
+        new THREE.Vector3(-4.6, 2.4, 7.3),
+        new THREE.Vector3(-2.2, 1.05, 5.3),
+        new THREE.Vector3(3.2, 0.68, 4.5),
+        new THREE.Vector3(3.4, 1.1, 3.5),
+      ],
+      false,
+      "centripetal",
+    );
+    const gazePath = new THREE.CatmullRomCurve3(
+      [
+        new THREE.Vector3(0, 0, 0),
+        new THREE.Vector3(-0.25, 0.12, -0.35),
+        new THREE.Vector3(-0.1, -0.05, -0.1),
+        new THREE.Vector3(0.65, -0.3, 0.1),
+        new THREE.Vector3(1.25, 0.06, 0.1),
+      ],
+      false,
+      "centripetal",
+    );
+    const travelPosition = new THREE.Vector3();
+    const gaze = new THREE.Vector3();
+    let viewAspect = 1;
+    // Render-target contents do not survive a lost context, so the reflection map is
+    // rebuilt whenever the context is restored.
+    const buildEnvironment = () => {
+      const room = new RoomEnvironment();
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      const target = pmrem.fromScene(room, 0.04);
+      room.dispose();
+      pmrem.dispose();
+      return target;
+    };
+    let environmentTarget = buildEnvironment();
     scene.environment = environmentTarget.texture;
     scene.environmentIntensity = 0.65;
-    environment.dispose();
-    pmrem.dispose();
 
     const textureSet = Object.fromEntries(
       materials.map((m) => [m.id, makeTexture(m.id)]),
@@ -299,12 +355,13 @@ export function MaterialScene({
     let enabled = initial.current.motion;
     let visible = true;
     let alive = true;
+    let contextAvailable = true;
     let raf = 0;
     let budgetUntil = 0;
     let last: number | null = null;
     const render = (now: number) => {
       raf = 0;
-      if (!alive || !visible || document.hidden) {
+      if (!alive || !contextAvailable || !visible || document.hidden) {
         diag.active = false;
         return;
       }
@@ -331,7 +388,21 @@ export function MaterialScene({
       cap.position.y = -1.02 + current.lift * 0.35;
       littleSlab.position.y = 0.96 + current.lift * 0.6;
       orb.position.y = -0.08 + current.lift * 0.45;
-      diag.pose = { ...current };
+      diag.pose.rotation = current.rotation;
+      diag.pose.lift = current.lift;
+      diag.pose.spread = current.spread;
+      if (travelState) {
+        const progress = THREE.MathUtils.clamp(travelState.progress, 0, 1);
+        positionPath.getPoint(progress, travelPosition);
+        gazePath.getPoint(progress, gaze);
+        // Portrait gives the surfaces breathing room without changing the story.
+        if (viewAspect < 1.12) travelPosition.sub(gaze).multiplyScalar(1.16).add(gaze);
+        camera.position.copy(travelPosition);
+        camera.lookAt(gaze);
+        camera.position.toArray(diag.camera.position);
+        gaze.toArray(diag.camera.target);
+        diag.camera.progress = progress;
+      }
       renderer.render(scene, camera);
       diag.frames++;
       diag.active = false;
@@ -345,13 +416,14 @@ export function MaterialScene({
       }
     };
     const wake = (duration = 1600) => {
-      if (!alive || !visible || document.hidden) return;
+      if (!alive || !contextAvailable || !visible || document.hidden) return;
       budgetUntil = enabled ? Math.max(budgetUntil, performance.now() + duration) : 0;
       if (!raf) {
         last = null;
         raf = requestAnimationFrame(render);
       }
     };
+    if (travelState) travelState.wake = () => wake(140);
     const select = (id: MaterialId) => {
       const index = materials.findIndex((m) => m.id === id);
       diag.material = id;
@@ -379,11 +451,16 @@ export function MaterialScene({
         height = element.clientHeight;
       if (!width || !height) return;
       const aspect = width / height;
-      const span = aspect < 0.9 ? 3.65 : 3.05;
-      camera.left = -span * aspect;
-      camera.right = span * aspect;
-      camera.top = span;
-      camera.bottom = -span;
+      viewAspect = aspect;
+      if (camera instanceof THREE.PerspectiveCamera) {
+        camera.aspect = aspect;
+      } else {
+        const span = aspect < 0.9 ? 3.65 : 3.05;
+        camera.left = -span * aspect;
+        camera.right = span * aspect;
+        camera.top = span;
+        camera.bottom = -span;
+      }
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
       wake(100);
@@ -425,31 +502,51 @@ export function MaterialScene({
     };
     const onLost = (event: Event) => {
       event.preventDefault();
+      // Release the reflection target while the context is gone (GL calls are no-ops now).
+      environmentTarget.dispose();
       diag.fallback = true;
       diag.ready = false;
+      diag.active = false;
+      contextAvailable = false;
+      travelState?.onAvailability?.(false);
       cancelAnimationFrame(raf);
       raf = 0;
       setFailed(true);
+    };
+    const onRestored = () => {
+      if (!alive) return;
+      environmentTarget = buildEnvironment();
+      scene.environment = environmentTarget.texture;
+      contextAvailable = true;
+      diag.fallback = false;
+      diag.ready = true;
+      setFailed(false);
+      travelState?.onAvailability?.(true);
+      wake(800);
     };
     element.addEventListener("pointermove", onPointer);
     element.addEventListener("pointerleave", onLeave);
     document.addEventListener("visibilitychange", onVisibility);
     renderer.domElement.addEventListener("webglcontextlost", onLost);
+    renderer.domElement.addEventListener("webglcontextrestored", onRestored);
     resize();
     select(initial.current.selected);
     wake(2200);
     diag.ready = true;
+    travelState?.onAvailability?.(true);
     setReady(true);
     return () => {
       alive = false;
       cancelAnimationFrame(raf);
       controls.current = null;
+      if (travelState) travelState.wake = undefined;
       observer.disconnect();
       intersection.disconnect();
       element.removeEventListener("pointermove", onPointer);
       element.removeEventListener("pointerleave", onLeave);
       document.removeEventListener("visibilitychange", onVisibility);
       renderer.domElement.removeEventListener("webglcontextlost", onLost);
+      renderer.domElement.removeEventListener("webglcontextrestored", onRestored);
       for (const mesh of pieces) mesh.geometry.dispose();
       for (const material of Object.values(surfaces)) material.dispose();
       for (const texture of Object.values(textureSet)) texture.dispose();
@@ -458,6 +555,8 @@ export function MaterialScene({
       key.shadow.dispose();
       environmentTarget.dispose();
       renderer.dispose();
+      // Release the GL context now rather than at garbage collection (browsers cap live contexts).
+      renderer.forceContextLoss();
       renderer.domElement.remove();
       diag.disposed = true;
       diag.active = false;

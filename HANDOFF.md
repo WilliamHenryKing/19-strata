@@ -1,4 +1,8 @@
-# Current release — 3 October 2026
+# STRATA refinement handover 4 October 2026
+
+Production resumed on 4 October at William's request. The camera, accessibility and layout corrections are committed locally on `work/website` and described in [docs/IMPECCABLE-REFINEMENT.md](docs/IMPECCABLE-REFINEMENT.md); they are not yet published. Both STRATA final renders (their scene now carries rebuilt olive, cypress and shrub planting), packaging, final browser/camera QA and the public release are pending, waiting for the shared GPU. The first release below remains the historical verified delivery. See the collection's [refinement handoff](../../ARCHITECTURE-REFINEMENT-HANDOFF.md) for current state.
+
+# First release — 3 October 2026
 
 **Complete, public and live:** [STRATA](https://19-strata.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/19-strata). All 68 local browser checks and 14 live asset hashes passed; desktop and phone live checks were clean. Exact application commit, Cloudflare version, limits and maintenance commands are in [docs/RELEASE.md](docs/RELEASE.md). Documentation commits after this release do not change its application identity.
 

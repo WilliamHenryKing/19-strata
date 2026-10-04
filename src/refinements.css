@@ -1,0 +1,1199 @@
+/* The incumbent clay-and-plum system, refined around readable roles and physical material imagery. */
+:root {
+  --body: 1rem;
+  --label: 0.875rem;
+  --muted: #755f67;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 16px;
+}
+html {
+  scrollbar-color: #80636b #eee9df;
+  scrollbar-width: thin;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+h1,
+h2 {
+  letter-spacing: -0.04em;
+}
+p {
+  line-height: 1.7;
+}
+a {
+  text-underline-offset: 0.2em;
+}
+input,
+textarea {
+  caret-color: var(--ink);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+.muted {
+  color: var(--muted);
+}
+.text-link {
+  min-height: 44px;
+  padding: 8px 0;
+  font-size: var(--label);
+}
+.text-link .icon,
+.back-top .icon,
+.card-arrow {
+  transition: transform 200ms var(--ease);
+}
+.text-link:hover .icon,
+.back-top:hover .icon,
+.project-card:hover .card-arrow {
+  transform: translate(3px, -3px);
+}
+.wordmark {
+  letter-spacing: -0.04em;
+}
+.header-descriptor {
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.45;
+}
+.site-header nav {
+  font-size: 14px;
+  gap: 32px;
+}
+.site-header nav > a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.site-header nav > a::after {
+  bottom: 5px;
+}
+.motion-toggle {
+  min-height: 44px;
+  font-size: 12px;
+  padding: 10px 13px;
+  bottom: max(17px, env(safe-area-inset-bottom));
+}
+.motion-toggle .icon {
+  width: 16px;
+  height: 16px;
+}
+.hero-copy {
+  padding-top: 44px;
+}
+.hero-copy h1 {
+  font-size: clamp(64px, 6.65vw, 96px);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+  word-spacing: normal;
+}
+.hero-intro {
+  font-size: 16px;
+  max-width: 32ch;
+  margin-top: 32px;
+  line-height: 1.7;
+}
+.hero-copy .text-link {
+  margin-top: 24px;
+}
+.material-selector {
+  width: 460px;
+}
+.selector-label {
+  font-size: 14px;
+  font-weight: 600;
+  align-items: center;
+  padding-bottom: 14px;
+}
+.selector-label .icon {
+  width: 18px;
+  height: 18px;
+}
+.material-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.material-option {
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+.material-option:hover {
+  border-color: var(--line);
+}
+.sample-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 1.35;
+  white-space: normal;
+  margin-top: 10px;
+}
+.sample-name .icon {
+  width: 13px;
+  height: 13px;
+  margin-top: 3px;
+}
+.hero-scroll {
+  font-size: 14px;
+  min-height: 44px;
+  gap: 20px;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 8px;
+}
+.intro-section {
+  display: block;
+}
+.intro-section > div {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 12%;
+  align-items: start;
+}
+.intro-section h2 {
+  font-size: clamp(32px, 3.25vw, 48px);
+  line-height: 1.16;
+}
+.intro-detail {
+  margin: 0;
+  max-width: 60ch;
+}
+.intro-detail p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.intro-detail .text-link {
+  margin-top: 12px;
+}
+.section-heading h2 {
+  margin-top: 0;
+  font-size: clamp(32px, 3.4vw, 48px);
+}
+.project-card-info {
+  padding-block: 22px;
+  gap: 16px;
+}
+.project-card h3 {
+  margin-top: 0;
+  line-height: 1.25;
+}
+.project-kind {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.image-open {
+  width: 44px;
+  height: 44px;
+}
+.project-card:hover .image-open {
+  transform: none;
+}
+.image-tag {
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.material-manifesto {
+  grid-template-columns: 0.85fr 1.3fr;
+}
+.manifesto-copy {
+  padding: 80px 12.6%;
+}
+.manifesto-copy h2 {
+  margin-top: 0;
+  font-size: clamp(56px, 6.4vw, 88px);
+  line-height: 1.03;
+}
+.manifesto-copy h2 em {
+  color: #d99076;
+}
+.manifesto-copy p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 38ch;
+  margin: 32px 0 24px;
+}
+.material-board {
+  min-height: 640px;
+}
+.material-study-picture {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.material-study-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% center;
+}
+.board-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 14px 18px;
+  font-size: 14px;
+}
+.invitation > div {
+  margin-top: 0;
+}
+.invitation h2 {
+  font-size: clamp(64px, 8.5vw, 96px);
+  line-height: 1.04;
+}
+.round-cta {
+  font-size: 16px;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+.round-cta > span {
+  max-width: 12ch;
+  text-align: center;
+}
+.round-cta:hover {
+  transform: none;
+}
+.invitation > p {
+  font-size: 16px;
+}
+.footer-top {
+  font-size: 14px;
+  gap: 32px;
+}
+.footer-top > div {
+  row-gap: 0;
+}
+.footer-top > div a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.back-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  min-height: 44px;
+}
+.footer-wordmark {
+  font-size: 20.8vw;
+  letter-spacing: -0.04em;
+}
+.footer-bottom {
+  font-size: 12px;
+  line-height: 1.6;
+  padding-right: 140px;
+}
+.page-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+}
+.page-intro h1,
+.materials-intro h1 {
+  font-size: clamp(58px, 7vw, 96px);
+  margin-top: 0;
+  line-height: 1.04;
+}
+.page-intro > p {
+  position: static;
+  width: 32%;
+  max-width: 38ch;
+  font-size: 16px;
+}
+.filter-list button {
+  font-size: 14px;
+  min-height: 44px;
+}
+.result-count {
+  font-size: 14px;
+}
+.concept-note {
+  font-size: 14px;
+  max-width: 72ch;
+  color: var(--muted);
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  font-size: 14px;
+}
+.back-link .icon {
+  width: 20px;
+}
+.project-title h1 {
+  margin-top: 0;
+  font-size: clamp(52px, 6.5vw, 96px);
+}
+.project-meta {
+  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+.project-story h2 {
+  margin-top: 0;
+}
+.large-copy {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 65ch;
+}
+.scope-list h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.scope-list > div,
+.scope-list > div > span:first-child {
+  font-size: 16px;
+}
+.project-development h3 {
+  font-size: 22px;
+}
+.project-development p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 65ch;
+}
+.palette-item > div {
+  padding-right: 32px;
+}
+.palette-item h3 {
+  margin-top: 0;
+}
+.palette-item > div > span:last-child {
+  font-size: 14px;
+}
+.palette-item > .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.next-project h2 {
+  margin-top: 0;
+}
+.next-project-label {
+  display: block;
+  font-size: 16px;
+  margin-top: 24px;
+}
+.next-project > .icon {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  right: 7%;
+  top: 44%;
+}
+.materials-intro > p {
+  max-width: 38ch;
+  font-size: 16px;
+}
+.explorer-stage {
+  overflow: hidden;
+  min-height: 820px;
+}
+.explorer-label {
+  font-size: 14px;
+}
+.material-detail-copy h2 {
+  margin: 0;
+}
+.material-detail-copy .material-finish {
+  font-size: 14px;
+  margin: 12px 0 24px;
+}
+.material-detail-copy h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.material-detail-copy > p,
+.material-detail-copy dd {
+  font-size: 16px;
+  line-height: 1.75;
+}
+.material-detail-copy dt {
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.material-footnote h3 {
+  font-size: 24px;
+}
+.material-footnote > p {
+  font-size: 16px;
+  max-width: 70ch;
+}
+.studio-intro h1 {
+  margin-top: 0;
+  font-size: clamp(64px, 8vw, 96px);
+}
+.studio-intro-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 48px;
+}
+.studio-intro-bottom p {
+  font-size: 18px;
+  max-width: 51ch;
+}
+.studio-values {
+  display: block;
+}
+.studio-values > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 10%;
+}
+.studio-values h2 {
+  font-size: clamp(48px, 5.5vw, 72px);
+  grid-row: span 2;
+  margin-bottom: 0;
+}
+.studio-values p {
+  font-size: 16px;
+  margin: 0;
+  max-width: 60ch;
+}
+.process-grid h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+.process-grid p {
+  font-size: 16px;
+}
+.studio-image h2 {
+  margin-top: 0;
+}
+.brief-intro h1 {
+  margin-top: 0;
+  font-size: clamp(44px, 5.1vw, 72px);
+}
+.brief-intro > p {
+  font-size: 16px;
+  max-width: 40ch;
+}
+.local-note {
+  max-width: 40ch;
+}
+.local-note .icon {
+  margin-top: 3px;
+}
+.local-note p {
+  font-size: 14px;
+}
+.brief-form legend {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.brief-form label {
+  font-size: 16px;
+}
+.brief-form label > span:not(.sample) {
+  font-size: 14px;
+}
+.brief-form input:not([type="checkbox"]),
+.brief-form select,
+.brief-form textarea {
+  font-size: 16px;
+  min-height: 52px;
+}
+.brief-form textarea {
+  min-height: 140px;
+}
+.field-row label {
+  min-height: 48px;
+}
+.field-hint {
+  font-size: 14px;
+}
+.brief-form .brief-material {
+  padding: 12px;
+  min-height: 64px;
+}
+.brief-material:has(input:checked) {
+  border-color: var(--ink);
+  background: #34202a06;
+}
+.brief-material input {
+  width: 18px;
+  height: 18px;
+}
+.brief-form .brief-material > span:last-child {
+  font-size: 14px;
+}
+.solid-button {
+  font-size: 16px;
+  min-height: 56px;
+}
+.brief-preview h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+.brief-preview pre {
+  font-size: 16px;
+  line-height: 1.75;
+}
+.brief-preview > p {
+  font-size: 14px;
+}
+@media (max-width: 1100px) {
+  .site-header nav {
+    gap: 24px;
+  }
+  .hero-scroll {
+    max-width: 220px;
+  }
+  .manifesto-copy {
+    padding: 64px 12%;
+  }
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 32px;
+  }
+  .field-row label {
+    min-height: 0;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding: 48px 6% 32px;
+  }
+  .hero-copy {
+    padding: 0;
+    width: 100%;
+  }
+  .hero-copy h1 {
+    font-size: min(10.6vw, 80px);
+  }
+  .hero-intro {
+    max-width: 35ch;
+    margin-top: 24px;
+  }
+  .hero-object {
+    position: relative;
+    width: 112%;
+    height: 460px;
+    top: auto;
+    right: auto;
+    margin: -20px -6% -40px;
+  }
+  .hero-bottom {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    align-items: flex-end;
+    gap: 28px;
+  }
+  .hero-bottom .material-selector {
+    width: 70%;
+  }
+  .hero-scroll {
+    max-width: 150px;
+    font-size: 14px;
+    gap: 16px;
+  }
+  .intro-section > div {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .intro-section h2 {
+    font-size: clamp(32px, 5.7vw, 44px);
+  }
+  .intro-detail {
+    max-width: 65ch;
+    margin-left: 20%;
+  }
+  .section-heading h2 {
+    font-size: 36px;
+  }
+  .section-heading > .text-link {
+    font-size: 14px;
+  }
+  .material-manifesto {
+    grid-template-columns: 1fr;
+  }
+  .manifesto-copy {
+    padding: 56px 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 6%;
+  }
+  .manifesto-copy h2 {
+    grid-row: span 2;
+    font-size: 64px;
+  }
+  .manifesto-copy p {
+    margin: 0;
+  }
+  .manifesto-copy .text-link {
+    justify-self: start;
+    font-size: 14px;
+  }
+  .material-board {
+    min-height: 0;
+    aspect-ratio: 1.6;
+  }
+  .footer-wordmark {
+    font-size: 20.3vw;
+  }
+  .back-top {
+    justify-content: flex-start;
+  }
+  .footer-bottom {
+    font-size: 12px;
+    padding-right: 0;
+    padding-bottom: 32px;
+  }
+  .page-intro {
+    gap: 32px;
+  }
+  .page-intro h1,
+  .materials-intro h1 {
+    font-size: 9vw;
+  }
+  .page-intro > p {
+    width: 36%;
+  }
+  .explorer-stage {
+    min-height: 530px;
+  }
+  .material-footnote > p {
+    font-size: 16px;
+  }
+  .studio-intro h1 {
+    font-size: min(11vw, 88px);
+  }
+  .studio-values > div {
+    gap: 24px 7%;
+  }
+  .studio-values h2 {
+    font-size: 48px;
+  }
+  .local-note {
+    max-width: 100%;
+  }
+  .local-note p {
+    max-width: 65ch;
+  }
+  .brief-materials {
+    grid-template-columns: 1fr 1fr;
+  }
+  .brief-form .brief-material {
+    flex-wrap: nowrap;
+  }
+  .brief-form .brief-material > span:last-child {
+    width: auto;
+  }
+}
+@media (max-width: 560px) {
+  .menu-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    min-height: 44px;
+    padding-block: 0;
+  }
+  .menu-button .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .site-header nav > a {
+    min-height: 56px;
+  }
+  .site-header nav .header-cta {
+    font-size: 16px;
+  }
+  .hero {
+    padding-top: 36px;
+  }
+  .hero-copy h1 {
+    font-size: 10.85vw;
+    line-height: 1.04;
+  }
+  .hero-intro {
+    font-size: 16px;
+    max-width: 31ch;
+  }
+  .hero-copy .text-link {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  .hero-object {
+    height: 370px;
+    margin-top: -8px;
+    margin-bottom: -32px;
+  }
+  .hero-bottom {
+    display: block;
+  }
+  .hero-bottom .material-selector {
+    width: 100%;
+  }
+  .material-options {
+    gap: 4px;
+  }
+  .sample-name {
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .sample-name .icon {
+    width: 12px;
+    height: 12px;
+  }
+  .hero-scroll {
+    display: none;
+  }
+  .intro-section h2 {
+    font-size: 32px;
+  }
+  .intro-detail {
+    max-width: 65ch;
+    margin-left: 0;
+  }
+  .intro-detail p {
+    font-size: 16px;
+  }
+  .intro-detail .text-link {
+    font-size: 14px;
+  }
+  .section-heading h2 {
+    font-size: 34px;
+  }
+  .project-card h3 {
+    font-size: 24px;
+  }
+  .image-open {
+    width: 44px;
+    height: 44px;
+  }
+  .image-tag {
+    font-size: 12px;
+  }
+  .manifesto-copy {
+    display: block;
+    padding: 56px 6%;
+  }
+  .manifesto-copy h2 {
+    font-size: 64px;
+  }
+  .manifesto-copy p {
+    max-width: 36ch;
+    font-size: 16px;
+    margin: 28px 0 24px;
+  }
+  .manifesto-copy .text-link {
+    font-size: 14px;
+  }
+  .material-board {
+    aspect-ratio: 1.12;
+  }
+  .material-study-picture img {
+    object-position: 50% center;
+  }
+  .board-caption {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    font-size: 14px;
+    padding: 12px;
+  }
+  .invitation > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 0;
+  }
+  .invitation h2 {
+    font-size: clamp(50px, 13vw, 72px);
+  }
+  .round-cta {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid var(--ink);
+    flex-direction: row;
+    gap: 32px;
+    font-size: 16px;
+    min-height: 48px;
+    padding: 8px 0;
+    margin: 0;
+  }
+  .round-cta > span {
+    max-width: none;
+    text-align: left;
+  }
+  .round-cta br {
+    display: none;
+  }
+  .round-cta:hover {
+    color: var(--ink);
+    background: transparent;
+  }
+  .invitation > p {
+    font-size: 16px;
+    max-width: 30ch;
+  }
+  .footer-top {
+    font-size: 14px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .footer-top > div {
+    gap: 0 24px;
+  }
+  .footer-wordmark {
+    font-size: 20.2vw;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+  .motion-toggle {
+    font-size: 12px;
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+  .page-intro,
+  .materials-intro {
+    display: block;
+  }
+  .page-intro h1,
+  .materials-intro h1,
+  .brief-intro h1 {
+    font-size: clamp(44px, 12.2vw, 64px);
+    margin-top: 0;
+  }
+  .page-intro > p,
+  .materials-intro > p {
+    width: auto;
+    max-width: 36ch;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+  .filter-list button {
+    font-size: 14px;
+    padding: 10px 11px;
+  }
+  .result-count {
+    display: none;
+  }
+  .concept-note {
+    font-size: 14px;
+  }
+  .project-title h1 {
+    font-size: clamp(44px, 12.2vw, 64px);
+  }
+  .project-meta {
+    font-size: 14px;
+  }
+  .project-story h2 {
+    margin-top: 0;
+  }
+  .large-copy {
+    font-size: 18px;
+  }
+  .project-development p {
+    font-size: 16px;
+  }
+  .palette-item > div {
+    padding-right: 0;
+  }
+  .palette-item > div > span:last-child {
+    font-size: 14px;
+  }
+  .palette-item > .icon {
+    width: 20px;
+  }
+  .next-project h2 {
+    font-size: 40px;
+    max-width: 84%;
+  }
+  .next-project > .icon {
+    width: 28px;
+    height: 28px;
+    right: 6%;
+  }
+  .explorer-stage {
+    min-height: 430px;
+  }
+  .explorer-label {
+    font-size: 14px;
+  }
+  .material-detail-copy h2 {
+    font-size: 40px;
+  }
+  .material-detail-copy > p,
+  .material-detail-copy dd {
+    font-size: 16px;
+  }
+  .material-footnote > p {
+    font-size: 16px;
+  }
+  .studio-intro h1 {
+    font-size: clamp(48px, 12.8vw, 72px);
+  }
+  .studio-intro-bottom p {
+    font-size: 16px;
+  }
+  .studio-values > div {
+    display: block;
+  }
+  .studio-values h2 {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+  .studio-values p {
+    font-size: 16px;
+  }
+  .studio-values p + p {
+    margin-top: 20px;
+  }
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .process-grid h3 {
+    font-size: 26px;
+    margin: 0 0 16px;
+  }
+  .process-grid p {
+    font-size: 16px;
+  }
+  .studio-image h2 {
+    font-size: 40px;
+  }
+  .brief-intro > p {
+    font-size: 16px;
+  }
+  .local-note p {
+    font-size: 14px;
+  }
+  .brief-form legend {
+    font-size: 24px;
+  }
+  .brief-form label {
+    font-size: 16px;
+  }
+  .brief-form label > span:not(.sample) {
+    font-size: 14px;
+  }
+  .brief-materials {
+    grid-template-columns: 1fr;
+  }
+  .field-row label {
+    min-height: 0;
+  }
+}
+@media (max-width: 370px) {
+  .hero-object {
+    height: 340px;
+  }
+  .material-options {
+    gap: 2px;
+  }
+  .sample-name {
+    font-size: 14px;
+  }
+  .material-option {
+    padding: 4px 3px;
+  }
+  .filter-list button {
+    padding-inline: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-picture img,
+  .text-link .icon,
+  .back-top .icon,
+  .card-arrow {
+    transition: none;
+  }
+  .project-card:hover img,
+  .text-link:hover .icon,
+  .back-top:hover .icon,
+  .project-card:hover .card-arrow {
+    transform: none;
+  }
+  .hero,
+  .site-header.on-hero,
+  .explorer-stage,
+  .material-scene canvas,
+  .material-scene .scene-fallback {
+    transition-duration: 120ms;
+  }
+}
+html[data-motion="off"] .project-picture img,
+html[data-motion="off"] .text-link .icon,
+html[data-motion="off"] .back-top .icon,
+html[data-motion="off"] .card-arrow {
+  transition: none;
+}
+html[data-motion="off"] .project-card:hover img,
+html[data-motion="off"] .text-link:hover .icon,
+html[data-motion="off"] .back-top:hover .icon,
+html[data-motion="off"] .project-card:hover .card-arrow {
+  transform: none;
+}
+html[data-motion="off"] .hero,
+html[data-motion="off"] .site-header.on-hero,
+html[data-motion="off"] .explorer-stage,
+html[data-motion="off"] .material-scene canvas,
+html[data-motion="off"] .material-scene .scene-fallback {
+  transition-duration: 120ms;
+}
+
+.world-gallery {
+  margin: 0;
+  min-width: 0;
+}
+.world-image {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+.world-image picture,
+.world-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.world-image img {
+  object-fit: cover;
+}
+.world-gallery figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-block: 18px;
+  font-size: 14px;
+}
+.world-view-controls {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.world-view-controls button {
+  font: inherit;
+  font-size: 14px;
+  min-height: 44px;
+  padding: 9px 16px;
+  color: inherit;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.world-view-controls button[aria-pressed="true"] {
+  border-color: currentColor;
+}
+.world-view-controls button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .world-gallery figcaption {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .world-view-controls button {
+    padding-inline: 13px;
+  }
+}
+
+.material-manifesto .world-gallery {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+}
+.material-manifesto .manifesto-copy {
+  max-width: 720px;
+}
+.world-view-controls button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.world-view-controls {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.solid-button:focus-visible {
+  outline-color: var(--ink);
+}
+
+/* The full-bleed atelier render sits below a two-column statement band, so no empty quadrant
+   opens beside the copy, and its caption returns to the page grid. */
+.material-manifesto {
+  grid-template-columns: 1fr;
+}
+.material-manifesto .manifesto-copy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 6%;
+  align-items: start;
+  max-width: none;
+  padding: 80px 5% 56px;
+}
+.material-manifesto .manifesto-copy h2 {
+  grid-row: span 2;
+}
+.material-manifesto .manifesto-copy p {
+  margin: 0;
+}
+.material-manifesto .manifesto-copy .text-link {
+  justify-self: start;
+}
+.material-manifesto .world-gallery {
+  margin-top: 0;
+}
+.material-manifesto .world-gallery figcaption {
+  padding-inline: 5%;
+}
+@media (max-width: 760px) {
+  .material-manifesto .manifesto-copy {
+    grid-template-columns: 1fr;
+    padding: 56px 6% 40px;
+  }
+  .material-manifesto .manifesto-copy h2 {
+    grid-row: auto;
+  }
+  .material-manifesto .world-gallery figcaption {
+    padding-inline: 6%;
+  }
+}

@@ -2,13 +2,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { type CSSProperties, type FormEvent, useEffect, useRef, useState } from "react";
 import { type MaterialId, materials, type Project, process, projects } from "./data";
+import { Icon } from "./Icon";
 import { MaterialScene } from "./MaterialScene";
+import { materialShots, useMaterialJourney } from "./useMaterialJourney";
+import { WorldGallery } from "./WorldGallery";
 
 gsap.registerPlugin(useGSAP);
 const getRoute = () => window.location.hash.replace(/^#/, "") || "/";
-const Arrow = ({ diagonal = false }: { diagonal?: boolean }) => (
-  <span aria-hidden="true">{diagonal ? "↗" : "↗"}</span>
-);
+const Arrow = () => <Icon name="arrow" />;
 
 function Picture({
   kind,
@@ -53,8 +54,8 @@ function MaterialSelector({
 }) {
   return (
     <div className={`material-selector ${light ? "on-light" : ""}`}>
-      <p className="eyebrow selector-label">
-        A feeling, in four finishes <span>↓</span>
+      <p className="selector-label">
+        Choose a finish <Icon name="down" />
       </p>
       <fieldset className="material-options" aria-label="Choose a material">
         {materials.map((material) => (
@@ -67,8 +68,10 @@ function MaterialSelector({
             aria-label={`Explore ${material.name}`}
           >
             <span className={`sample surface-${material.id}`} />
-            <span className="sample-number">{material.number}</span>
-            <span className="sample-name">{material.name}</span>
+            <span className="sample-name">
+              {material.name}
+              {selected === material.id && <Icon name="check" />}
+            </span>
           </button>
         ))}
       </fieldset>
@@ -95,14 +98,10 @@ function ProjectCard({ project, index = 0 }: { project: Project; index?: number 
       </div>
       <div className="project-card-info">
         <div>
-          <p className="eyebrow">
-            {project.number} / {project.kind}
-          </p>
           <h3>{project.name}</h3>
+          <p className="project-kind">{project.kind}</p>
         </div>
-        <span className="card-plus" aria-hidden="true">
-          +
-        </span>
+        <Icon name="arrow" className="card-arrow" />
       </div>
     </a>
   );
@@ -118,58 +117,91 @@ function Home({
   motion: boolean;
 }) {
   const material = materials.find((item) => item.id === selected) ?? materials[0];
+  const projectHeading = useRef<HTMLHeadingElement>(null);
+  const journey = useMaterialJourney(motion, projectHeading);
   return (
     <>
-      <section className="hero" style={{ "--hero-tone": material.tone } as CSSProperties}>
-        <div className="hero-topline">
-          <span className="eyebrow">Architecture / interiors / the finishing touch</span>
-          <span className="eyebrow hero-edition">Material study no. {material.number} — 2026</span>
-        </div>
-        <div className="hero-copy">
-          <h1 className="entrance">
-            Good spaces.
-            <br />
-            Great surfaces<span className="hero-period">.</span>
-          </h1>
-          <p className="hero-intro entrance">
-            Thoughtful spaces, expressive materials.
-            <br />
-            Considered from the ground up.
-            <br />
-            Felt in every finish.
-          </p>
-          <a href="#/work" className="text-link entrance">
-            Explore our work <Arrow />
-          </a>
-        </div>
-        <div className="hero-object">
-          <MaterialScene selected={selected} motion={motion} />
-          <div className="object-caption">
-            <span className="object-index">{material.number.padStart(2, "0")}</span>
-            <div>
-              <span className="eyebrow">Currently in the studio</span>
-              <strong>{material.name}</strong>
-              <span>{material.finish}</span>
-            </div>
-            <span className="object-cross" aria-hidden="true">
-              +
-            </span>
-          </div>
-        </div>
-        <div className="hero-bottom">
-          <MaterialSelector selected={selected} onSelect={setSelected} />
-          <a className="hero-scroll" href="#/materials">
-            <span>
-              Every layer
+      <div className="material-journey" ref={journey.root}>
+        <section
+          className="hero has-camera-tour"
+          style={{ "--hero-tone": material.tone } as CSSProperties}
+        >
+          <div className="hero-copy" data-camera-caption>
+            <h1 className="entrance">
+              Good spaces.
               <br />
-              has a story.
-            </span>
-            <span aria-hidden="true">↘</span>
-          </a>
-        </div>
-      </section>
+              Great surfaces<span className="hero-period">.</span>
+            </h1>
+            <p className="hero-intro">
+              Thoughtful spaces, expressive materials. Considered from the ground up. Felt in every
+              finish.
+            </p>
+            <a href="#/work" className="text-link">
+              Explore our work <Arrow />
+            </a>
+          </div>
+          <div
+            className="journey-caption"
+            data-camera-caption
+            aria-hidden={journey.activeShot !== 1}
+          >
+            <h2>A curve with character.</h2>
+            <p>Move around the form. See how a single edge changes the light.</p>
+          </div>
+          <div
+            className="journey-caption"
+            data-camera-caption
+            aria-hidden={journey.activeShot !== 2}
+          >
+            <h2>
+              Every grain.
+              <br />
+              Every edge.
+            </h2>
+            <p>Come closer. Warm timber, quiet stone and the glint of metal.</p>
+          </div>
+          <div className="hero-object">
+            <MaterialScene selected={selected} motion={motion} travel={journey.travel} />
+          </div>
+          <div className="hero-bottom">
+            <MaterialSelector selected={selected} onSelect={setSelected} />
+            <div className="journey-navigation">
+              <div className="journey-meta">
+                <p>
+                  {!journey.available
+                    ? "Still material study"
+                    : journey.scrollLinked
+                      ? "Scroll to move closer"
+                      : "Choose your viewpoint"}
+                </p>
+                <button type="button" className="journey-skip" onClick={journey.skip}>
+                  Skip to projects <Icon name="down" />
+                </button>
+              </div>
+              <nav aria-label="Material camera views" className="journey-views">
+                {materialShots.map((shot, index) => (
+                  <button
+                    key={shot.name}
+                    type="button"
+                    disabled={!journey.available}
+                    aria-current={journey.activeShot === index ? "step" : undefined}
+                    onClick={() => journey.jump(index)}
+                  >
+                    {shot.name}
+                  </button>
+                ))}
+              </nav>
+              <div className="journey-progress" aria-hidden="true">
+                <span className="journey-progress-fill" />
+              </div>
+              <p className="sr-only" aria-live="polite">
+                {journey.announcement}
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
       <section className="intro-section section-padding">
-        <span className="eyebrow section-kicker">01 / The STRATA approach</span>
         <div>
           <h2>
             Beautiful is a beginning.
@@ -194,11 +226,12 @@ function Home({
       <section className="selected-work section-padding">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">02 / Selected concepts</span>
-            <h2>Spaces with substance.</h2>
+            <h2 ref={projectHeading} tabIndex={-1}>
+              Spaces with substance.
+            </h2>
           </div>
           <a href="#/work" className="text-link">
-            All projects <span>03</span> <Arrow />
+            All projects <Arrow />
           </a>
         </div>
         <div className="home-projects">
@@ -209,7 +242,6 @@ function Home({
       </section>
       <section className="material-manifesto">
         <div className="manifesto-copy">
-          <span className="eyebrow">03 / Material matters</span>
           <h2>
             Less gloss.
             <br />
@@ -223,17 +255,7 @@ function Home({
             Enter the material library <Arrow />
           </a>
         </div>
-        <a href="#/materials" className="material-board" aria-label="Explore our material library">
-          <span className="board-piece board-travertine surface-travertine" />
-          <span className="board-piece board-walnut surface-walnut" />
-          <span className="board-piece board-metal surface-aluminium" />
-          <span className="board-piece board-clay surface-clay" />
-          <span className="board-label eyebrow">Tactile / honest / expressive</span>
-          <span className="board-circle">
-            Touch
-            <br />& feel <Arrow />
-          </span>
-        </a>
+        <WorldGallery />
       </section>
       <Invitation />
     </>
@@ -247,7 +269,6 @@ function Work() {
   return (
     <section className="work-page section-padding">
       <div className="page-intro">
-        <span className="eyebrow">The project index / 2026</span>
         <h1 className="entrance">
           Built on
           <br />
@@ -268,12 +289,11 @@ function Work() {
               onClick={() => setFilter(item)}
             >
               {item}
-              {item === "All" && <sup>03</sup>}
             </button>
           ))}
         </fieldset>
-        <span className="eyebrow" aria-live="polite">
-          {visible.length.toString().padStart(2, "0")} studies
+        <span className="result-count" aria-live="polite">
+          {visible.length} {visible.length === 1 ? "study" : "studies"}
         </span>
       </div>
       <div className="work-grid">
@@ -297,14 +317,12 @@ function ProjectPage({ project }: { project: Project }) {
     <>
       <section className="project-title section-padding">
         <a href="#/work" className="back-link">
-          ← Project index
+          <Icon name="back" /> Project index
         </a>
         <div className="project-title-row">
           <div>
-            <span className="eyebrow">
-              Study {project.number} / {project.kind}
-            </span>
             <h1 className="entrance">{project.name}</h1>
+            <p className="project-kind">{project.kind}</p>
           </div>
           <p>{project.tagline}</p>
         </div>
@@ -324,15 +342,13 @@ function ProjectPage({ project }: { project: Project }) {
       </div>
       <section className="project-story section-padding">
         <div>
-          <span className="eyebrow">The intention</span>
           <h2>{project.tagline}</h2>
           <p className="large-copy">{project.intro}</p>
         </div>
         <div className="scope-list">
-          <span className="eyebrow">Scope of the study</span>
-          {project.scope.map((item, index) => (
+          <h3>Scope of the study</h3>
+          {project.scope.map((item) => (
             <div key={item}>
-              <span>0{index + 1}</span>
               <span>{item}</span>
             </div>
           ))}
@@ -340,18 +356,17 @@ function ProjectPage({ project }: { project: Project }) {
       </section>
       <section className="project-development section-padding">
         <div>
-          <span className="eyebrow">01 / The question</span>
+          <h3>The question</h3>
           <p>{project.challenge}</p>
         </div>
         <div>
-          <span className="eyebrow">02 / The response</span>
+          <h3>The response</h3>
           <p>{project.response}</p>
         </div>
       </section>
       <section className="project-palette section-padding">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">03 / The material conversation</span>
             <h2>A considered combination.</h2>
           </div>
           <a href="#/materials" className="text-link">
@@ -365,7 +380,6 @@ function ProjectPage({ project }: { project: Project }) {
               <a href={`#/materials/${id}`} className="palette-item" key={id}>
                 <span className={`palette-surface surface-${id}`} />
                 <div>
-                  <span className="eyebrow">{material.family}</span>
                   <h3>{material.name}</h3>
                   <span>{material.finish}</span>
                 </div>
@@ -376,8 +390,8 @@ function ProjectPage({ project }: { project: Project }) {
         </div>
       </section>
       <a href={`#/work/${next.slug}`} className="next-project section-padding">
-        <span className="eyebrow">Next study / {next.number}</span>
         <h2>{next.name}</h2>
+        <span className="next-project-label">Explore the next study</span>
         <Arrow />
       </a>
     </>
@@ -397,8 +411,11 @@ function MaterialsPage({
   const detail = useRef<HTMLDivElement>(null);
   useGSAP(
     () => {
-      if (motion)
-        gsap.from(".material-detail-copy > *", { y: 12, opacity: 0, stagger: 0.06, duration: 0.4 });
+      gsap.fromTo(
+        ".material-detail-copy",
+        { opacity: 0.55 },
+        { opacity: 1, duration: motion ? 0.24 : 0.12, clearProps: "opacity" },
+      );
     },
     { scope: detail, dependencies: [selected, motion], revertOnUpdate: true },
   );
@@ -406,7 +423,6 @@ function MaterialsPage({
     <>
       <section className="materials-intro section-padding">
         <div>
-          <span className="eyebrow">The material library / four starting points</span>
           <h1 className="entrance">
             Feel the
             <br />
@@ -424,19 +440,15 @@ function MaterialsPage({
       >
         <div className="explorer-stage">
           <MaterialScene selected={selected} motion={motion} compact />
-          <span className="explorer-index">
-            {material.number}
-            <span>/ 04</span>
-          </span>
-          <span className="eyebrow explorer-label">An original digital material study</span>
+          <span className="explorer-label">Interactive material study</span>
         </div>
         <div className="explorer-details" ref={detail}>
           <MaterialSelector selected={selected} onSelect={setSelected} light />
           <div className="material-detail-copy" aria-live="polite">
-            <span className="eyebrow">
-              {material.family} / {material.finish}
-            </span>
             <h2>{material.name}</h2>
+            <p className="material-finish">
+              {material.family} / {material.finish}
+            </p>
             <h3>{material.character}</h3>
             <p>{material.description}</p>
             <dl>
@@ -456,7 +468,7 @@ function MaterialsPage({
         </div>
       </section>
       <section className="material-footnote section-padding">
-        <span className="eyebrow">A note on the real thing</span>
+        <h3>Start with a real sample.</h3>
         <p>
           Digital surfaces suggest a feeling. Real samples tell the full story. Colour, grain,
           suitability and installation details should always be assessed in the actual space, with
@@ -472,16 +484,12 @@ function Studio() {
   return (
     <>
       <section className="studio-intro section-padding">
-        <span className="eyebrow">The studio / a design point of view</span>
         <h1 className="entrance">
           The finish
           <br />
           is the <em>feeling.</em>
         </h1>
         <div className="studio-intro-bottom">
-          <span className="studio-symbol" aria-hidden="true">
-            S↗
-          </span>
           <p>
             STRATA is a concept atelier for architecture, interiors and finishes. A place to explore
             how thoughtful spaces and tactile materials can make everyday life feel a little better.
@@ -489,7 +497,6 @@ function Studio() {
         </div>
       </section>
       <section className="studio-values section-padding">
-        <span className="eyebrow">One idea, carried all the way through.</span>
         <div>
           <h2>
             Big picture.
@@ -512,15 +519,12 @@ function Studio() {
       <section className="process-section section-padding">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">From first thought to final layer</span>
             <h2>A considered process.</h2>
           </div>
-          <span className="eyebrow">Four connected stages</span>
         </div>
         <div className="process-grid">
           {process.map((item) => (
             <article key={item.number}>
-              <span className="process-number">{item.number}</span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </article>
@@ -533,7 +537,6 @@ function Studio() {
           alt="Generated study of a richly textured terracotta interior with a stone table and walnut detailing"
         />
         <div>
-          <span className="eyebrow">Our north star</span>
           <h2>
             Spaces to live in.
             <br />
@@ -549,7 +552,6 @@ function Studio() {
 function Invitation() {
   return (
     <section className="invitation section-padding">
-      <span className="eyebrow">Your next layer starts here.</span>
       <div>
         <h2>
           Something
@@ -557,11 +559,7 @@ function Invitation() {
           in mind?
         </h2>
         <a href="#/brief" className="round-cta">
-          <span>
-            Build your
-            <br />
-            project brief
-          </span>
+          <span>Build your project brief</span>
           <Arrow />
         </a>
       </div>
@@ -605,7 +603,6 @@ function Brief({ initialMaterial }: { initialMaterial: MaterialId }) {
   return (
     <section className="brief-page section-padding">
       <div className="brief-intro">
-        <span className="eyebrow">The first conversation / with your ideas</span>
         <h1 className="entrance">
           Let's give it
           <br />
@@ -616,7 +613,7 @@ function Brief({ initialMaterial }: { initialMaterial: MaterialId }) {
           thoughts, then take the result with you.
         </p>
         <div className="local-note">
-          <span aria-hidden="true">↙</span>
+          <Icon name="download" />
           <p>
             <strong>Yours to keep.</strong> This concept site creates a text brief on your device.
             It sends nothing, collects no contact details and does not submit an enquiry.
@@ -625,9 +622,7 @@ function Brief({ initialMaterial }: { initialMaterial: MaterialId }) {
       </div>
       <form className="brief-form" onSubmit={build}>
         <fieldset>
-          <legend>
-            <span>01</span> What are you imagining?
-          </legend>
+          <legend>What are you imagining?</legend>
           <label htmlFor="space">
             Kind of space <span>(required)</span>
           </label>
@@ -703,9 +698,7 @@ function Brief({ initialMaterial }: { initialMaterial: MaterialId }) {
           </div>
         </fieldset>
         <fieldset>
-          <legend>
-            <span>02</span> What speaks to you?
-          </legend>
+          <legend>What speaks to you?</legend>
           <p className="field-hint">Choose any materials you would like to explore.</p>
           <div className="brief-materials">
             {materials.map((material) => (
@@ -725,9 +718,7 @@ function Brief({ initialMaterial }: { initialMaterial: MaterialId }) {
           </div>
         </fieldset>
         <fieldset>
-          <legend>
-            <span>03</span> What matters most?
-          </legend>
+          <legend>What matters most?</legend>
           <label htmlFor="priorities">
             Your priorities <span>(optional, up to 800 characters)</span>
           </label>
@@ -753,11 +744,10 @@ function Brief({ initialMaterial }: { initialMaterial: MaterialId }) {
         <p className="field-hint">Preview it first. Download it when you are ready.</p>
         {summary && (
           <div className="brief-preview" ref={preview} tabIndex={-1}>
-            <span className="eyebrow">Your starting point is ready.</span>
-            <h2>A little more clarity.</h2>
+            <h2>Your brief is ready.</h2>
             <pre>{summary}</pre>
             <button type="button" className="solid-button" onClick={download}>
-              Download text brief <span aria-hidden="true">↓</span>
+              Download text brief <Icon name="download" />
             </button>
             <p role="status">
               {downloaded
@@ -791,12 +781,12 @@ function Footer() {
         </div>
         {/* biome-ignore lint/a11y/useValidAnchor: Navigates the home hash route and resets an already-active home page. */}
         <a href="#/" className="back-top" onClick={scrollHome}>
-          Back to the beginning <span aria-hidden="true">↗</span>
+          Back to the beginning <Arrow />
         </a>
       </div>
       {/* biome-ignore lint/a11y/useValidAnchor: Navigates the home hash route and resets an already-active home page. */}
       <a className="footer-wordmark" href="#/" aria-label="STRATA home" onClick={scrollHome}>
-        STRATA<span>+</span>
+        STRATA
       </a>
       <div className="footer-bottom">
         <span>© 2026 STRATA — an independent portfolio concept.</span>
@@ -821,7 +811,50 @@ export function App() {
   const main = useRef<HTMLElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
   const firstRoute = useRef(true);
+  const motionToggle = useRef<HTMLButtonElement>(null);
+  const [tucked, setTucked] = useState(false);
   const path = route.split("?")[0] ?? "/";
+
+  // At the top of the home page the hero's controls end just above the fold, where the fixed
+  // motion switch lives. While it would actually cover them it steps aside (still focusable,
+  // shown on focus); once the hero pins after a short scroll the switch returns.
+  useEffect(() => {
+    const pill = motionToggle.current;
+    const blocks =
+      path === "/"
+        ? Array.from(
+            document.querySelectorAll<HTMLElement>(
+              ".has-camera-tour .material-selector, .has-camera-tour .journey-navigation",
+            ),
+          )
+        : [];
+    if (!pill || !blocks.length) {
+      setTucked(false);
+      return;
+    }
+    let frame = 0;
+    const measure = () => {
+      frame = 0;
+      const a = pill.getBoundingClientRect();
+      setTucked(
+        blocks.some((block) => {
+          const b = block.getBoundingClientRect();
+          return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+        }),
+      );
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(measure);
+    };
+    measure();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+    };
+  }, [path]);
   const briefRequestedMaterial = new URLSearchParams(route.split("?")[1]).get("material");
   const briefInitialMaterial =
     materials.find((item) => item.id === briefRequestedMaterial)?.id ?? selected;
@@ -843,8 +876,19 @@ export function App() {
                 : "Page not found";
   useEffect(() => {
     const listener = () => setRoute(getRoute());
+    const onHeaderNavigation = (event: MouseEvent) => {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest<HTMLAnchorElement>(".site-header a");
+      if (!link) return;
+      setMenuOpen(false);
+      if (link.hash === window.location.hash) main.current?.focus({ preventScroll: true });
+    };
     window.addEventListener("hashchange", listener);
-    return () => window.removeEventListener("hashchange", listener);
+    document.addEventListener("click", onHeaderNavigation);
+    return () => {
+      window.removeEventListener("hashchange", listener);
+      document.removeEventListener("click", onHeaderNavigation);
+    };
   }, []);
   useEffect(() => {
     document.title = `STRATA — ${routeTitle}`;
@@ -890,15 +934,17 @@ export function App() {
   }, [menuOpen]);
   useGSAP(
     () => {
-      if (!motion) return;
-      gsap.from(".entrance", {
-        opacity: 0,
-        y: 30,
-        duration: 0.85,
-        stagger: 0.1,
-        ease: "power3.out",
-        clearProps: "transform,opacity",
-      });
+      if (!motion || path !== "/") return;
+      gsap.fromTo(
+        ".hero-copy h1",
+        { clipPath: "inset(0 0 20% 0)" },
+        {
+          clipPath: "inset(0 0 0% 0)",
+          duration: 0.7,
+          ease: "expo.out",
+          clearProps: "clipPath",
+        },
+      );
     },
     { scope: main, dependencies: [route, motion], revertOnUpdate: true },
   );
@@ -926,11 +972,11 @@ export function App() {
         }
       >
         <a href="#/" className="wordmark" aria-label="STRATA home">
-          STRATA<span>+</span>
+          STRATA
         </a>
         <span className="header-descriptor">
-          Spaces. Surfaces.
-          <br />A little substance.
+          Architecture, interiors
+          <br />& finishes.
         </span>
         <button
           type="button"
@@ -940,7 +986,8 @@ export function App() {
           aria-controls="primary-navigation"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? "Close −" : "Menu +"}
+          {menuOpen ? "Close" : "Menu"}
+          <Icon name={menuOpen ? "close" : "menu"} />
         </button>
         <nav
           id="primary-navigation"
@@ -948,7 +995,7 @@ export function App() {
           aria-label="Main navigation"
         >
           <a href="#/work" aria-current={path.startsWith("/work") ? "page" : undefined}>
-            Projects <sup>03</sup>
+            Projects
           </a>
           <a href="#/materials" aria-current={isMaterials ? "page" : undefined}>
             Materials
@@ -961,23 +1008,23 @@ export function App() {
             className="header-cta"
             aria-current={path === "/brief" ? "page" : undefined}
           >
-            Let's talk <Arrow />
+            Project brief <Arrow />
           </a>
         </nav>
       </header>
       <button
         type="button"
         className="motion-toggle"
+        ref={motionToggle}
+        data-tucked={tucked}
         onClick={() => setMotion(!motion)}
         aria-pressed={motion}
-        aria-label={`Motion ${motion ? "on" : "off"}. ${motion ? "Pause" : "Enable"} animations.`}
       >
-        <span className={motion ? "motion-icon playing" : "motion-icon"} aria-hidden="true">
-          <i />
-          <i />
-          <i />
+        <Icon name={motion ? "pause" : "play"} />
+        {/* A constant name with aria-pressed; the visible state word is not announced twice. */}
+        <span>
+          Motion <span aria-hidden="true">{motion ? "on" : "off"}</span>
         </span>
-        <span>Motion {motion ? "on" : "off"}</span>
       </button>
       <main id="main" ref={main} tabIndex={-1}>
         {path === "/" ? (
@@ -994,7 +1041,6 @@ export function App() {
           <Brief key={route} initialMaterial={briefInitialMaterial} />
         ) : (
           <section className="not-found section-padding">
-            <span className="eyebrow">404 / An unfinished corner</span>
             <h1>
               This space
               <br />
