@@ -1,0 +1,41 @@
+{
+  "scene": "strata",
+  "view": "detail",
+  "quality": "final",
+  "rendered": true,
+  "sourceBlend": "C:\\Users\\William King\\Documents\\Money Making Project\\.workspace\\architecture-worlds\\strata-detail-final.blend",
+  "sourceBlendSha256": "f00aed247e367a21b9b353e3950ee329df01d4c09369f5fe0716009c535dd177",
+  "region": [
+    0,
+    0,
+    864,
+    1064
+  ],
+  "fullResolution": [
+    3200,
+    2000
+  ],
+  "resolution": [
+    864,
+    1064
+  ],
+  "compute": "CUDA",
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 2060",
+      "type": "CUDA",
+      "id": "CUDA_NVIDIA GeForce RTX 2060_0000:01:00"
+    }
+  ],
+  "cpuEnabled": false,
+  "denoiser": "OPTIX",
+  "samples": 1024,
+  "adaptiveThreshold": 0.004999999888241291,
+  "minimumSamples": 96,
+  "bounces": 14,
+  "blender": "5.2.2 LTS",
+  "tileSize": 512,
+  "bytes": 3550216,
+  "sha256": "27a460e5ba6dc1b28e855ba2b8b382964349fca2129652ad4f08922fe16f6d66",
+  "elapsedSeconds": 212.331
+}

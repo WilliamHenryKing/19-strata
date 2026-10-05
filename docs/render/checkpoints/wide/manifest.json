@@ -1,0 +1,425 @@
+{
+  "schema": 1,
+  "scene": "strata",
+  "view": "wide",
+  "quality": "final",
+  "sourceFingerprint": "29e94bddc6fc81b7478dfe96355d64bb2b3b6f5debffb66f2bb2bbf4e7995c9b",
+  "sourceContract": {
+    "schema": 1,
+    "scene": "strata",
+    "view": "wide",
+    "quality": "final",
+    "settings": {
+      "resolution": [
+        3200,
+        2000
+      ],
+      "samples": 768,
+      "adaptiveThreshold": 0.005,
+      "minimumSamples": 96,
+      "bounces": 14,
+      "compute": "CUDA",
+      "cpuEnabled": false,
+      "denoiser": "OPTIX"
+    },
+    "grid": [
+      4,
+      2
+    ],
+    "overscan": 64,
+    "sources": {
+      "tools/render-checkpointed-worlds.py": "e8e82603a24b31197db3aad94dc13abeb0c846cde1439dea3f584f53ffc7fb2d",
+      "tools/render-architecture-guard.py": "152e8d95bf73403316397d59cec4ded334548bb6aeb07f414bec0b390a9f210a",
+      "tools/render-architecture-region.py": "cbe472508553ccab5a2b5ab31ef633c3955033f506232dbee06a3ef02da4a01f",
+      "tools/render-architecture-world.py": "8c183997407790df322dc43371b72f4bb924017def3787a0bdfb5a55f31d8175",
+      "tools/render-architecture-cuda.py": "4d064dabfc5544990711e0288fb435f0d1ed7c50d4098b08eaf3e216e522e435",
+      "tools/worlds/world_common.py": "8fcc61c2f1febc05770adf2053608844b812a18ed3808754897e50d6054c6552",
+      "tools/worlds/strata.py": "04f3a2bb98f2448d980f47231b603711e574bdafb28d667b2474dff83ddbd003",
+      "tools/worlds/cloth/strata.json": "cbebc86365cc7a2e6858cdea811113cfc2505bfbf9593471f3a5216d1e364a31",
+      ".workspace/architecture-worlds/textures/manifest.json": "11dc5c1bd8dd2055cc5ba130b028735f40d804c9457ced7d24d4ff2868fbb4c2",
+      ".workspace/architecture-worlds/textures/fine_grained_wood/fine_grained_wood_col_2k.jpg": "d97b1ab2c5206ac43bc0c42f21878da14f4d02497fd21396399406c03f3755a9",
+      ".workspace/architecture-worlds/textures/fine_grained_wood/fine_grained_wood_nor_gl_2k.jpg": "c76fcd29434978227db5a35b5b0238da1bee0fb5fa8cdfc6819a76c7ef723f3c",
+      ".workspace/architecture-worlds/textures/fine_grained_wood/fine_grained_wood_rough_2k.jpg": "7e8f5fc146ae7accd3b9deb2a173c1cf253707ccdee5070ce16cefd4ee68f1b7",
+      ".workspace/architecture-worlds/textures/rosewood_veneer1/rosewood_veneer1_diff_2k.jpg": "4aae1766165d5058ae0311d94d53fb0d5c7cb55d3314916e801b9505cf34ed8e",
+      ".workspace/architecture-worlds/textures/rosewood_veneer1/rosewood_veneer1_nor_gl_2k.jpg": "9ae97e960494ffc5cd948ad89225f694a4624a228418f107bd7145d020dd728d",
+      ".workspace/architecture-worlds/textures/rosewood_veneer1/rosewood_veneer1_rough_2k.jpg": "33e775b991b2f2b4abe0ce61fed193599f336f7dc887847ca58068f92592c7e4",
+      ".workspace/architecture-worlds/textures/marble_01/marble_01_diff_2k.jpg": "d403786171716f86718bdd67eba923d4fb6125c0636bacef0e6a21dd5d623a48",
+      ".workspace/architecture-worlds/textures/marble_01/marble_01_nor_gl_2k.jpg": "d5e17ccb2913adbf28fcb781fddf0aa711259ddea6c1c918442f9a3589aa4660",
+      ".workspace/architecture-worlds/textures/marble_01/marble_01_rough_2k.jpg": "1b970e033856c93ee7390d947da5340e101b489fc8c1463354ea9e6655ce039a",
+      ".workspace/architecture-worlds/textures/plastered_wall/plastered_wall_diff_2k.jpg": "c9f3235d6b28b249dd3c7e6346483f1f6ae11e62b4a81d0397936ff756dfcb1f",
+      ".workspace/architecture-worlds/textures/plastered_wall/plastered_wall_nor_gl_2k.jpg": "de20f536b1ec428c6de32267b317bbf538ecfa5c42398743f1b702a0f8434071",
+      ".workspace/architecture-worlds/textures/plastered_wall/plastered_wall_rough_2k.jpg": "be5c23b7d473bf1dea6d3a39b3e0537d5cf9eb990b4148566d20a35dc0902e54",
+      ".workspace/architecture-worlds/textures/rough_linen/rough_linen_diff_2k.jpg": "e71016e08dfebea1dd4e8a2a675e3b617a889a782af782f1abb795906f4db1b4",
+      ".workspace/architecture-worlds/textures/rough_linen/rough_linen_nor_gl_2k.jpg": "c5733ad50cfe0f90c546f3d4076590c1c78a4fd1a83c967cc9c92dc8175b99e6",
+      ".workspace/architecture-worlds/textures/rough_linen/rough_linen_rough_2k.jpg": "48400d48fa203882bf5d984d5beb2f95edb1550309924601c018f2c4f3f80731",
+      ".workspace/architecture-worlds/textures/concrete_wall_004/concrete_wall_004_diff_2k.jpg": "f0d2060e3ef503a6458ed94c92d059d794be38b56b3a3965e113922a5947ee39",
+      ".workspace/architecture-worlds/textures/concrete_wall_004/concrete_wall_004_nor_gl_2k.jpg": "c8df927b4923dabd7ea243f0bd497713ceefd43b8820ee0c2da05b8951e4ca80",
+      ".workspace/architecture-worlds/textures/concrete_wall_004/concrete_wall_004_rough_2k.jpg": "491ee32fb2a941f627dfd9dc3c5f46da2c3b941a3ba1ac698aa2ea0b0bdec3b6",
+      ".workspace/architecture-worlds/textures/brown_mud_leaves_01/brown_mud_leaves_01_diff_2k.jpg": "29c997d77f56e4ea16d3e998a306be0c17fddb28ab4822657c7cd8249040ffda",
+      ".workspace/architecture-worlds/textures/brown_mud_leaves_01/brown_mud_leaves_01_nor_gl_2k.jpg": "b6ec386e00d9d2a1c3a1da6a98a67066b0dfaa88ddb779341df29700cf081bdf",
+      ".workspace/architecture-worlds/textures/brown_mud_leaves_01/brown_mud_leaves_01_rough_2k.jpg": "9556215f5fef905c37cdf19c77aef7822f124890f8fb7dcce65d57c5eafc0ca5",
+      ".workspace/architecture-worlds/textures/kiara_1_dawn/kiara_1_dawn_2k.hdr": "7261c613b35a9b760ed5c7846ec8182532b90d89f6a8385c42bb743883159a66",
+      ".workspace/architecture-worlds/textures/kloofendal_48d_partly_cloudy/kloofendal_48d_partly_cloudy_2k.hdr": "3fbd33f279f29bd64925c1dd3214fd46c627493d21f1100248b6b1098da4d06e"
+    },
+    "blenderRuntime": {
+      "path": ".workspace/blender-runtime/Blender Foundation/Blender 5.2/blender.exe",
+      "bytes": 113022936,
+      "mtimeNs": 1789436408000000000
+    }
+  },
+  "createdAt": "2026-10-04T13:14:37.014461+00:00",
+  "complete": true,
+  "tiles": {
+    "r1-c1": {
+      "id": "r1-c1",
+      "core": [
+        0,
+        0,
+        800,
+        1000
+      ],
+      "region": [
+        0,
+        0,
+        864,
+        1064
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c1.png",
+        "bytes": 4045230,
+        "sha256": "44c5519ca10b529d5e1717db7390d30f6cd5a8871a15a66325da7f0d08226c39"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c1.json",
+        "bytes": 981,
+        "sha256": "27deaa3406d733c77a1c6ddf554788bbd1c50176212396f53ab7d647ecb26a52"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c1.machine.json",
+        "bytes": 119617,
+        "sha256": "25ada1d5948e23c31b2364a1f6e1c7a4f7305c73c171bb3df78292e04ea8a702"
+      }
+    },
+    "r1-c2": {
+      "id": "r1-c2",
+      "core": [
+        800,
+        0,
+        1600,
+        1000
+      ],
+      "region": [
+        736,
+        0,
+        1664,
+        1064
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c2.png",
+        "bytes": 4641464,
+        "sha256": "d8911dfd290046ea90f73a7718025db0dd4477bb6bc630636c4b2c6e9d09c2c6"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c2.json",
+        "bytes": 984,
+        "sha256": "0773debd6c2ea4065c5502e4d398473d8f0a7224789b5743fbaf0bca02abc36a"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c2.machine.json",
+        "bytes": 34147,
+        "sha256": "104dec8e8506808646e2f289091185aed88143f9e2353baf9252b3a201cfa8d3"
+      }
+    },
+    "r1-c3": {
+      "id": "r1-c3",
+      "core": [
+        1600,
+        0,
+        2400,
+        1000
+      ],
+      "region": [
+        1536,
+        0,
+        2464,
+        1064
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c3.png",
+        "bytes": 4747410,
+        "sha256": "0bbe9becc4e3b8fbfc28d89834f4e16de1ac8307b3d4b95b8211620102b1aba3"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c3.json",
+        "bytes": 985,
+        "sha256": "8c21ddd54bff8985ddf7fb8e1cb7c5a6d54150c82654859e01b2f1d1c5017601"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c3.machine.json",
+        "bytes": 34684,
+        "sha256": "a3da3564d7c141d4793a4cb30170a10517b2ca22660b2ddd7df6be411bebc214"
+      }
+    },
+    "r1-c4": {
+      "id": "r1-c4",
+      "core": [
+        2400,
+        0,
+        3200,
+        1000
+      ],
+      "region": [
+        2336,
+        0,
+        3200,
+        1064
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c4.png",
+        "bytes": 4100390,
+        "sha256": "17f8fc2fa66489633ac1dccf883ca3423b3a2cb00befa2ca05634bdf6a22977b"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c4.json",
+        "bytes": 984,
+        "sha256": "6b51a9e7c19b887cef7da7d88e05e43078857a5dbcb2124081738985f93eaba3"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c4.machine.json",
+        "bytes": 15167,
+        "sha256": "064d988c349d47c875fd8291dc52ba24a61077f7bbef3a4a16bac2b1e09a06ef"
+      }
+    },
+    "r2-c1": {
+      "id": "r2-c1",
+      "core": [
+        0,
+        1000,
+        800,
+        2000
+      ],
+      "region": [
+        0,
+        936,
+        864,
+        2000
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c1.png",
+        "bytes": 4172959,
+        "sha256": "7f789d31f1d2c6303d33396527652d4bdde067fa2ee7a025d8c6949e4f0385bf"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c1.json",
+        "bytes": 983,
+        "sha256": "197a2ad2624f31ecfb47db5ce499586aea0364b7dbd27c2e75f9c7188136db15"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c1.machine.json",
+        "bytes": 31405,
+        "sha256": "fccb264dc09b368570229b227be24650063927e27813cf505723f50cdb7a57b8"
+      }
+    },
+    "r2-c2": {
+      "id": "r2-c2",
+      "core": [
+        800,
+        1000,
+        1600,
+        2000
+      ],
+      "region": [
+        736,
+        936,
+        1664,
+        2000
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c2.png",
+        "bytes": 4559028,
+        "sha256": "9d324c90907302300e4cfa0b6a0aa0fab3d280923cb444065a9b603be90be4cd"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c2.json",
+        "bytes": 986,
+        "sha256": "f81eb411db28c8723fe4a5a06a5e2270e709adb8f41e8b0df8d3a53eedfa5700"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c2.machine.json",
+        "bytes": 53027,
+        "sha256": "9fd1622bb81fcb26fc7a7f066f77e8424d459509a1db19d563eb342ca58dfb29"
+      }
+    },
+    "r2-c3": {
+      "id": "r2-c3",
+      "core": [
+        1600,
+        1000,
+        2400,
+        2000
+      ],
+      "region": [
+        1536,
+        936,
+        2464,
+        2000
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c3.png",
+        "bytes": 4656477,
+        "sha256": "b370ff2bf0332fe97f4f7d1e60d78205b12a92cbdfcb84b29a5432b02cb3e340"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c3.json",
+        "bytes": 987,
+        "sha256": "e78e7f9f098b3b23e30a0768f7cbc0cf8b7107406e08cb762358b50a4fd2fd62"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c3.machine.json",
+        "bytes": 66133,
+        "sha256": "389603403739db3752754e2a302ec939399736d37ca018e842fba361eee9b7af"
+      }
+    },
+    "r2-c4": {
+      "id": "r2-c4",
+      "core": [
+        2400,
+        1000,
+        3200,
+        2000
+      ],
+      "region": [
+        2336,
+        936,
+        3200,
+        2000
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c4.png",
+        "bytes": 4144758,
+        "sha256": "d97b1903ddb5b1ed3edc972ea76751d18fdc34db3719e97dc695916d0a590c8b"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c4.json",
+        "bytes": 987,
+        "sha256": "e8f6867905cac32cb4c6b1baa3a5930631f3869970b159463ae91c043de9136a"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c4.machine.json",
+        "bytes": 51900,
+        "sha256": "dfe32cd15d39ff7d16500b968a77afa39ec11d48b7ff58a7c40aaa5542d74f95"
+      }
+    }
+  },
+  "status": "complete",
+  "updatedAt": "2026-10-05T09:33:23.936201+00:00",
+  "construction": {
+    "blend": {
+      "path": ".workspace/architecture-worlds/strata-wide-final.blend",
+      "bytes": 49325088,
+      "sha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98"
+    },
+    "metadata": {
+      "path": ".workspace/architecture-worlds/checkpoints/strata-wide/construction-history/29e94bddc6fc81b7-29548ca6/construction.json",
+      "bytes": 2000,
+      "sha256": "f7c37fd5abdf0f4c620f89f7fafa22e2de124d73d29fcc7a360cfe051906b982"
+    },
+    "machine": {
+      "path": ".workspace/architecture-worlds/checkpoints/strata-wide/construction-history/29e94bddc6fc81b7-29548ca6/construction.machine.json",
+      "bytes": 1540,
+      "sha256": "f23740fafbbf02f708d4ebb1fbce26221247fb1f8091b6a5d96a605295a247c0"
+    }
+  },
+  "full": {
+    "png": {
+      "path": ".workspace/architecture-worlds/strata-wide-final.png",
+      "bytes": 29355545,
+      "sha256": "87803a7f026fa3ce61d74fc18c8709cc7dec518bae4711cfdb99bfb9d93e3d37",
+      "colorChunks": [
+        {
+          "type": "sRGB",
+          "sha256": "711c4ff49da83dd7f14b0800b6ad4f7df58e6d66545525e83e14ba3992da0d69"
+        },
+        {
+          "type": "gAMA",
+          "sha256": "38ad77a09221cff71e5ca575333e576de71e0007f4d370083d8005dce15017d5"
+        },
+        {
+          "type": "cHRM",
+          "sha256": "68765597c7f1e0610c20028a6e9a7080d200ae493389fb5147ad186697ea4db5"
+        }
+      ]
+    },
+    "blend": {
+      "path": ".workspace/architecture-worlds/strata-wide-final.blend",
+      "bytes": 49325088,
+      "sha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98"
+    },
+    "metadata": {
+      "path": ".workspace/architecture-worlds/strata-wide-final.json",
+      "bytes": 13018,
+      "sha256": "5d337885b30bb1a0b5ea74e15b2b7a2548a9280056aa1471bce880beead7ae21"
+    },
+    "machine": {
+      "path": ".workspace/architecture-worlds/strata-wide-final.machine.json",
+      "bytes": 425969,
+      "sha256": "47628f17344eb536abab26c1338056d980690f7e830441081c444a2f48ca2b5b"
+    }
+  }
+}

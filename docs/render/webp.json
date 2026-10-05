@@ -1,0 +1,42 @@
+{
+  "scene": "strata",
+  "codec": "WebP",
+  "records": [
+    {
+      "file": "public/images/strata-world.webp",
+      "width": 3200,
+      "height": 2000,
+      "bytes": 343856,
+      "sha256": "179e70528ac5a652790c58a036498e73732eae060a5a9b87da91c4f5a4c8bd71",
+      "quality": 90,
+      "source": "strata-wide-final.png"
+    },
+    {
+      "file": "public/images/strata-world-mobile.webp",
+      "width": 1000,
+      "height": 625,
+      "bytes": 46998,
+      "sha256": "277755cb96a2524a72a5a4db4c46eb7748861ea8dfdfdea91061c284b4e50d2a",
+      "quality": 86,
+      "source": "strata-wide-final.png"
+    },
+    {
+      "file": "public/images/strata-material-study.webp",
+      "width": 3200,
+      "height": 2000,
+      "bytes": 244532,
+      "sha256": "4c898804895239a56b417001008aba278dce995525beee29dd9686e968cafb27",
+      "quality": 90,
+      "source": "strata-detail-final.png"
+    },
+    {
+      "file": "public/images/strata-material-study-mobile.webp",
+      "width": 1000,
+      "height": 625,
+      "bytes": 39446,
+      "sha256": "0723dbf561fb9adbcf5d2f0d1945214a4c2d1429be51c0b45cd30ea7b660bc79",
+      "quality": 86,
+      "source": "strata-detail-final.png"
+    }
+  ]
+}

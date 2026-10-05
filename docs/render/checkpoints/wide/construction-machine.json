@@ -1,0 +1,67 @@
+{
+  "scene": "strata",
+  "view": "wide",
+  "quality": "final",
+  "guards": {
+    "maxGpuC": 85,
+    "pauseGpuC": 79,
+    "resumeGpuC": 59,
+    "minFreeVramMiB": 1024,
+    "minFreeRamMiB": 1536,
+    "pauseFreeRamMiB": 2048,
+    "resumeFreeRamMiB": 2304,
+    "maxMemoryPauseSeconds": 600
+  },
+  "samples": [
+    {
+      "elapsedSeconds": 0.06,
+      "gpuC": 74,
+      "freeVramMiB": 4894,
+      "usedVramMiB": 1062,
+      "gpuPercent": 41,
+      "freeRamMiB": 4220,
+      "freeCommitMiB": 4666
+    },
+    {
+      "elapsedSeconds": 0.14,
+      "gpuC": 74,
+      "freeVramMiB": 4894,
+      "usedVramMiB": 1062,
+      "gpuPercent": 41,
+      "freeRamMiB": 4198,
+      "freeCommitMiB": 4542,
+      "rendererWorkingMiB": 17,
+      "rendererPrivateMiB": 119
+    },
+    {
+      "elapsedSeconds": 1.7,
+      "gpuC": 74,
+      "freeVramMiB": 4905,
+      "usedVramMiB": 1051,
+      "gpuPercent": 32,
+      "freeRamMiB": 4008,
+      "freeCommitMiB": 4364,
+      "rendererWorkingMiB": 225,
+      "rendererPrivateMiB": 294
+    },
+    {
+      "elapsedSeconds": 3.26,
+      "gpuC": 72,
+      "freeVramMiB": 4905,
+      "usedVramMiB": 1051,
+      "gpuPercent": 35,
+      "freeRamMiB": 3981,
+      "freeCommitMiB": 4350,
+      "rendererWorkingMiB": 284,
+      "rendererPrivateMiB": 349
+    }
+  ],
+  "coolingPeriods": [],
+  "operation": "scene-preparation",
+  "exitCode": 0,
+  "guardStopped": false,
+  "elapsedSeconds": 4.77,
+  "maxGpuC": 74,
+  "minFreeVramMiB": 4894,
+  "minFreeRamMiB": 3981
+}

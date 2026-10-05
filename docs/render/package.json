@@ -1,0 +1,294 @@
+{
+  "scene": "strata",
+  "purpose": "Source packaging, not browser/release acceptance",
+  "finalInputs": {
+    "wide": {
+      "png": {
+        "file": "strata-wide-final.png",
+        "bytes": 29355545,
+        "sha256": "87803a7f026fa3ce61d74fc18c8709cc7dec518bae4711cfdb99bfb9d93e3d37"
+      },
+      "blend": {
+        "file": "strata-wide-final.blend",
+        "bytes": 49325088,
+        "sha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98"
+      },
+      "metadata": {
+        "file": "strata-wide-final.json",
+        "bytes": 13018,
+        "sha256": "5d337885b30bb1a0b5ea74e15b2b7a2548a9280056aa1471bce880beead7ae21"
+      },
+      "machine": {
+        "file": "strata-wide-final.machine.json",
+        "bytes": 425969,
+        "sha256": "47628f17344eb536abab26c1338056d980690f7e830441081c444a2f48ca2b5b"
+      }
+    },
+    "detail": {
+      "png": {
+        "file": "strata-detail-final.png",
+        "bytes": 26578842,
+        "sha256": "0dc9ca5ce2a76cf8ef22d00713d7c888c132c868eb4900e780869ce58144d6e2"
+      },
+      "blend": {
+        "file": "strata-detail-final.blend",
+        "bytes": 49325030,
+        "sha256": "f00aed247e367a21b9b353e3950ee329df01d4c09369f5fe0716009c535dd177"
+      },
+      "metadata": {
+        "file": "strata-detail-final.json",
+        "bytes": 13074,
+        "sha256": "553642f478ec6cfe55ef2b98eef6f4f21ef9601d83b23ca5f33e2a23cda0b21a"
+      },
+      "machine": {
+        "file": "strata-detail-final.machine.json",
+        "bytes": 407665,
+        "sha256": "23c1536f14c1fcc64804427491f033a2bc2eab4dccc3b2c3da13bb8b91bedc34"
+      }
+    }
+  },
+  "clothInputs": {
+    "tools\\worlds\\cloth\\strata.json": {
+      "bytes": 819419,
+      "sha256": "cbebc86365cc7a2e6858cdea811113cfc2505bfbf9593471f3a5216d1e364a31"
+    },
+    ".workspace\\architecture-worlds\\cloth\\strata.blend": {
+      "bytes": 451876,
+      "sha256": "a08c491abf2029cda0cc1a4d0228e4a2d797df7cd211c5b7dbc1857adcf7eff8"
+    }
+  },
+  "packagedFiles": {
+    "assets/source/architecture-world.blend": {
+      "bytes": 49325088,
+      "sha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98"
+    },
+    "assets/source/texture-manifest.json": {
+      "bytes": 10091,
+      "sha256": "11dc5c1bd8dd2055cc5ba130b028735f40d804c9457ced7d24d4ff2868fbb4c2"
+    },
+    "assets/source/cloth-study.blend": {
+      "bytes": 451876,
+      "sha256": "a08c491abf2029cda0cc1a4d0228e4a2d797df7cd211c5b7dbc1857adcf7eff8"
+    },
+    "tools/worlds/cloth/strata.json": {
+      "bytes": 819419,
+      "sha256": "cbebc86365cc7a2e6858cdea811113cfc2505bfbf9593471f3a5216d1e364a31"
+    },
+    "tools/bake-cloth.py": {
+      "bytes": 9375,
+      "sha256": "bdac91867eaa74f505096decc39da3a3d3917401c9b81f13910d9a03c604c183"
+    },
+    "docs/render/cloth.json": {
+      "bytes": 1161,
+      "sha256": "d491454f9ca7aba4b8e6c3fd6adc61e2d7f2a180d5465a5d006949906a0c276e"
+    },
+    "tools/render-world.py": {
+      "bytes": 5130,
+      "sha256": "cfd62700b34d44e1d2ac1c704b0ea2801fc015afcbad9245a988fa1ae92ab170"
+    },
+    "tools/render-architecture-cuda.py": {
+      "bytes": 23264,
+      "sha256": "4d064dabfc5544990711e0288fb435f0d1ed7c50d4098b08eaf3e216e522e435"
+    },
+    "tools/fetch-render-textures.py": {
+      "bytes": 3910,
+      "sha256": "e895a051df8982af8e2f62c3fbc033c213d13b85fa88326798f98ce09b828bc4"
+    },
+    "tools/worlds/world_common.py": {
+      "bytes": 20870,
+      "sha256": "8fcc61c2f1febc05770adf2053608844b812a18ed3808754897e50d6054c6552"
+    },
+    "tools/worlds/strata.py": {
+      "bytes": 38110,
+      "sha256": "04f3a2bb98f2448d980f47231b603711e574bdafb28d667b2474dff83ddbd003"
+    }
+  },
+  "webpDelivery": {
+    "public/images/strata-world.webp": {
+      "presentAtPackaging": true,
+      "bytes": 343856,
+      "sha256": "179e70528ac5a652790c58a036498e73732eae060a5a9b87da91c4f5a4c8bd71"
+    },
+    "public/images/strata-world-mobile.webp": {
+      "presentAtPackaging": true,
+      "bytes": 46998,
+      "sha256": "277755cb96a2524a72a5a4db4c46eb7748861ea8dfdfdea91061c284b4e50d2a"
+    },
+    "public/images/strata-material-study.webp": {
+      "presentAtPackaging": true,
+      "bytes": 244532,
+      "sha256": "4c898804895239a56b417001008aba278dce995525beee29dd9686e968cafb27"
+    },
+    "public/images/strata-material-study-mobile.webp": {
+      "presentAtPackaging": true,
+      "bytes": 39446,
+      "sha256": "0723dbf561fb9adbcf5d2f0d1945214a4c2d1429be51c0b45cd30ea7b660bc79"
+    }
+  },
+  "checkpointEvidence": {
+    "wide": {
+      "renderMethod": "checkpointed border regions with 64px overscan",
+      "records": {
+        "manifest.json": {
+          "bytes": 17259,
+          "sha256": "ed852ca483896e75ffd0514a892142714f87ebc8e0929f0a99cf626f2f47a123"
+        },
+        "r1-c1-metadata.json": {
+          "bytes": 981,
+          "sha256": "27deaa3406d733c77a1c6ddf554788bbd1c50176212396f53ab7d647ecb26a52"
+        },
+        "r1-c1-machine.json": {
+          "bytes": 119617,
+          "sha256": "25ada1d5948e23c31b2364a1f6e1c7a4f7305c73c171bb3df78292e04ea8a702"
+        },
+        "r1-c2-metadata.json": {
+          "bytes": 984,
+          "sha256": "0773debd6c2ea4065c5502e4d398473d8f0a7224789b5743fbaf0bca02abc36a"
+        },
+        "r1-c2-machine.json": {
+          "bytes": 34147,
+          "sha256": "104dec8e8506808646e2f289091185aed88143f9e2353baf9252b3a201cfa8d3"
+        },
+        "r1-c3-metadata.json": {
+          "bytes": 985,
+          "sha256": "8c21ddd54bff8985ddf7fb8e1cb7c5a6d54150c82654859e01b2f1d1c5017601"
+        },
+        "r1-c3-machine.json": {
+          "bytes": 34684,
+          "sha256": "a3da3564d7c141d4793a4cb30170a10517b2ca22660b2ddd7df6be411bebc214"
+        },
+        "r1-c4-metadata.json": {
+          "bytes": 984,
+          "sha256": "6b51a9e7c19b887cef7da7d88e05e43078857a5dbcb2124081738985f93eaba3"
+        },
+        "r1-c4-machine.json": {
+          "bytes": 15167,
+          "sha256": "064d988c349d47c875fd8291dc52ba24a61077f7bbef3a4a16bac2b1e09a06ef"
+        },
+        "r2-c1-metadata.json": {
+          "bytes": 983,
+          "sha256": "197a2ad2624f31ecfb47db5ce499586aea0364b7dbd27c2e75f9c7188136db15"
+        },
+        "r2-c1-machine.json": {
+          "bytes": 31405,
+          "sha256": "fccb264dc09b368570229b227be24650063927e27813cf505723f50cdb7a57b8"
+        },
+        "r2-c2-metadata.json": {
+          "bytes": 986,
+          "sha256": "f81eb411db28c8723fe4a5a06a5e2270e709adb8f41e8b0df8d3a53eedfa5700"
+        },
+        "r2-c2-machine.json": {
+          "bytes": 53027,
+          "sha256": "9fd1622bb81fcb26fc7a7f066f77e8424d459509a1db19d563eb342ca58dfb29"
+        },
+        "r2-c3-metadata.json": {
+          "bytes": 987,
+          "sha256": "e78e7f9f098b3b23e30a0768f7cbc0cf8b7107406e08cb762358b50a4fd2fd62"
+        },
+        "r2-c3-machine.json": {
+          "bytes": 66133,
+          "sha256": "389603403739db3752754e2a302ec939399736d37ca018e842fba361eee9b7af"
+        },
+        "r2-c4-metadata.json": {
+          "bytes": 987,
+          "sha256": "e8f6867905cac32cb4c6b1baa3a5930631f3869970b159463ae91c043de9136a"
+        },
+        "r2-c4-machine.json": {
+          "bytes": 51900,
+          "sha256": "dfe32cd15d39ff7d16500b968a77afa39ec11d48b7ff58a7c40aaa5542d74f95"
+        },
+        "construction-metadata.json": {
+          "bytes": 2000,
+          "sha256": "f7c37fd5abdf0f4c620f89f7fafa22e2de124d73d29fcc7a360cfe051906b982"
+        },
+        "construction-machine.json": {
+          "bytes": 1540,
+          "sha256": "f23740fafbbf02f708d4ebb1fbce26221247fb1f8091b6a5d96a605295a247c0"
+        }
+      },
+      "regionPngsIncluded": false
+    },
+    "detail": {
+      "renderMethod": "checkpointed border regions with 64px overscan",
+      "records": {
+        "manifest.json": {
+          "bytes": 17325,
+          "sha256": "adac4fba92123707c6ad0aa10b000aea8b9f1ae0ab462aaf800bf2e8e2e20867"
+        },
+        "r1-c1-metadata.json": {
+          "bytes": 986,
+          "sha256": "bf9075422fd22050f7d5c12fb67f68717a0a5fac1451cb7a8052528d6faa44a5"
+        },
+        "r1-c1-machine.json": {
+          "bytes": 37706,
+          "sha256": "c37b074900f3df9db36e86c5fdd6477ff2bee1f609cfa79b21e0ad0207156f48"
+        },
+        "r1-c2-metadata.json": {
+          "bytes": 989,
+          "sha256": "e09ce620f8cb2debb853e6189a5f097c6e0a8846d4d2011e5a4cee4a7e51ff05"
+        },
+        "r1-c2-machine.json": {
+          "bytes": 54683,
+          "sha256": "94d8e66c55da3d37ddef8f5898316919a5fcaf4a2e48914160bac0502316b696"
+        },
+        "r1-c3-metadata.json": {
+          "bytes": 990,
+          "sha256": "d87a1af2688faaf5b125f4549e87e8fde9e2fc9a1f2690ba80483c6275f62215"
+        },
+        "r1-c3-machine.json": {
+          "bytes": 72040,
+          "sha256": "d15a2eabf9a30614caa30c489b89b50df2bdd9f9e0670f6fd66fe15c6a73cda1"
+        },
+        "r1-c4-metadata.json": {
+          "bytes": 989,
+          "sha256": "87bad8ddd2de804aec5317a55ae2d960a6f99ff00969f0943414fafc6acf840a"
+        },
+        "r1-c4-machine.json": {
+          "bytes": 39892,
+          "sha256": "2cef63aa0a50c49e8fb3c61c48b610bad2cbc884713f7cbbc4541677b937b71d"
+        },
+        "r2-c1-metadata.json": {
+          "bytes": 988,
+          "sha256": "30a9aa995f93c5921b11680c4e0b47e83738bf6991b9a63a6c28b09710ef24d7"
+        },
+        "r2-c1-machine.json": {
+          "bytes": 35788,
+          "sha256": "12529da32984801d47f79d2e170935dbf4936e9433a54e25f2da726b6be2fbb3"
+        },
+        "r2-c2-metadata.json": {
+          "bytes": 991,
+          "sha256": "e62a70f14bd15a12b08d013a104602abbba670dd97f19eebca97cf315689421d"
+        },
+        "r2-c2-machine.json": {
+          "bytes": 56677,
+          "sha256": "a660c004f793597166ffb89711562d2c8e2426743bd06160aac83ce0a02c34f4"
+        },
+        "r2-c3-metadata.json": {
+          "bytes": 992,
+          "sha256": "3876b782f880a69a41415be43b79bc15c719c0568f9f38eb388bc2bc341eb616"
+        },
+        "r2-c3-machine.json": {
+          "bytes": 51648,
+          "sha256": "065c652cc70b2195f885832a4a46b39fe2ee1f900bad21c9bca412e5253348a5"
+        },
+        "r2-c4-metadata.json": {
+          "bytes": 992,
+          "sha256": "b72c2a9e7b11db6ef08a245d9fc78dd4c06e1bb7c32667531f722c69acfedce9"
+        },
+        "r2-c4-machine.json": {
+          "bytes": 40156,
+          "sha256": "f0b0fbf99ce3ca7811376799e76e3341f92a334183bc508cf9b28ed2ebb009cd"
+        },
+        "construction-metadata.json": {
+          "bytes": 2003,
+          "sha256": "25626893d60121b7be90ae4493afbcd042b9d1033bd971465b124213c6e7f0a1"
+        },
+        "construction-machine.json": {
+          "bytes": 1535,
+          "sha256": "c203fb9aa501016af8dfab56328dbe78a061c20b49b90b069ef481245ca8029b"
+        }
+      },
+      "regionPngsIncluded": false
+    }
+  }
+}

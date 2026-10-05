@@ -1,0 +1,415 @@
+{
+  "scene": "strata",
+  "view": "wide",
+  "quality": "final",
+  "compute": "CUDA",
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 2060",
+      "type": "CUDA",
+      "id": "CUDA_NVIDIA GeForce RTX 2060_0000:01:00"
+    }
+  ],
+  "cpuEnabled": false,
+  "denoiser": "OPTIX",
+  "blender": "5.2.2 LTS",
+  "resolution": [
+    3200,
+    2000
+  ],
+  "samples": 768,
+  "adaptiveThreshold": 0.004999999888241291,
+  "minimumSamples": 96,
+  "bounces": 14,
+  "objects": 674,
+  "evaluatedTriangles": 962004,
+  "geometry": "Original Python authored architectural world",
+  "materials": "Original procedural and Poly Haven CC0 photo PBR; see textures/manifest.json",
+  "texturesPacked": true,
+  "rendered": true,
+  "cloth": {
+    "sha256": "cbebc86365cc7a2e6858cdea811113cfc2505bfbf9593471f3a5216d1e364a31",
+    "bake": {
+      "method": "Blender Cloth gravity and self-collision; no analytic final fold surface",
+      "blender": "5.2.2 LTS",
+      "frame": 130,
+      "frames": 130,
+      "cacheBaked": true,
+      "seconds": 109.71207785606384,
+      "units": "metres",
+      "space": "world",
+      "restPose": {
+        "centre": [
+          -2.52,
+          -3.75,
+          0.94
+        ],
+        "width": 1.18,
+        "length": 1.12,
+        "angle": 0.12,
+        "seed": 572
+      },
+      "physics": {
+        "quality": 10,
+        "collisionQuality": 8,
+        "mass": 0.22,
+        "tension": 18,
+        "compression": 18,
+        "shear": 8,
+        "bending": 0.12,
+        "distance": 0.004,
+        "selfDistance": 0.004,
+        "gravity": [
+          0.0,
+          0.0,
+          -9.8100004196167
+        ],
+        "unpinned": true
+      },
+      "blendFile": "C:\\Users\\William King\\Documents\\Money Making Project\\.workspace\\architecture-worlds\\cloth\\strata.blend",
+      "snapshotObject": "SETTLED SNAPSHOT / unhide to inspect without cache"
+    }
+  },
+  "tileSize": 512,
+  "elapsedSeconds": 2307.62,
+  "bytes": 29355545,
+  "sha256": "87803a7f026fa3ce61d74fc18c8709cc7dec518bae4711cfdb99bfb9d93e3d37",
+  "renderMethod": "checkpointed border regions with 64px overscan",
+  "sourceFingerprint": "29e94bddc6fc81b7478dfe96355d64bb2b3b6f5debffb66f2bb2bbf4e7995c9b",
+  "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+  "regions": [
+    {
+      "id": "r1-c1",
+      "core": [
+        0,
+        0,
+        800,
+        1000
+      ],
+      "region": [
+        0,
+        0,
+        864,
+        1064
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c1.png",
+        "bytes": 4045230,
+        "sha256": "44c5519ca10b529d5e1717db7390d30f6cd5a8871a15a66325da7f0d08226c39"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c1.json",
+        "bytes": 981,
+        "sha256": "27deaa3406d733c77a1c6ddf554788bbd1c50176212396f53ab7d647ecb26a52"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c1.machine.json",
+        "bytes": 119617,
+        "sha256": "25ada1d5948e23c31b2364a1f6e1c7a4f7305c73c171bb3df78292e04ea8a702"
+      }
+    },
+    {
+      "id": "r1-c2",
+      "core": [
+        800,
+        0,
+        1600,
+        1000
+      ],
+      "region": [
+        736,
+        0,
+        1664,
+        1064
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c2.png",
+        "bytes": 4641464,
+        "sha256": "d8911dfd290046ea90f73a7718025db0dd4477bb6bc630636c4b2c6e9d09c2c6"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c2.json",
+        "bytes": 984,
+        "sha256": "0773debd6c2ea4065c5502e4d398473d8f0a7224789b5743fbaf0bca02abc36a"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c2.machine.json",
+        "bytes": 34147,
+        "sha256": "104dec8e8506808646e2f289091185aed88143f9e2353baf9252b3a201cfa8d3"
+      }
+    },
+    {
+      "id": "r1-c3",
+      "core": [
+        1600,
+        0,
+        2400,
+        1000
+      ],
+      "region": [
+        1536,
+        0,
+        2464,
+        1064
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c3.png",
+        "bytes": 4747410,
+        "sha256": "0bbe9becc4e3b8fbfc28d89834f4e16de1ac8307b3d4b95b8211620102b1aba3"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c3.json",
+        "bytes": 985,
+        "sha256": "8c21ddd54bff8985ddf7fb8e1cb7c5a6d54150c82654859e01b2f1d1c5017601"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c3.machine.json",
+        "bytes": 34684,
+        "sha256": "a3da3564d7c141d4793a4cb30170a10517b2ca22660b2ddd7df6be411bebc214"
+      }
+    },
+    {
+      "id": "r1-c4",
+      "core": [
+        2400,
+        0,
+        3200,
+        1000
+      ],
+      "region": [
+        2336,
+        0,
+        3200,
+        1064
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c4.png",
+        "bytes": 4100390,
+        "sha256": "17f8fc2fa66489633ac1dccf883ca3423b3a2cb00befa2ca05634bdf6a22977b"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c4.json",
+        "bytes": 984,
+        "sha256": "6b51a9e7c19b887cef7da7d88e05e43078857a5dbcb2124081738985f93eaba3"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r1-c4.machine.json",
+        "bytes": 15167,
+        "sha256": "064d988c349d47c875fd8291dc52ba24a61077f7bbef3a4a16bac2b1e09a06ef"
+      }
+    },
+    {
+      "id": "r2-c1",
+      "core": [
+        0,
+        1000,
+        800,
+        2000
+      ],
+      "region": [
+        0,
+        936,
+        864,
+        2000
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c1.png",
+        "bytes": 4172959,
+        "sha256": "7f789d31f1d2c6303d33396527652d4bdde067fa2ee7a025d8c6949e4f0385bf"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c1.json",
+        "bytes": 983,
+        "sha256": "197a2ad2624f31ecfb47db5ce499586aea0364b7dbd27c2e75f9c7188136db15"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c1.machine.json",
+        "bytes": 31405,
+        "sha256": "fccb264dc09b368570229b227be24650063927e27813cf505723f50cdb7a57b8"
+      }
+    },
+    {
+      "id": "r2-c2",
+      "core": [
+        800,
+        1000,
+        1600,
+        2000
+      ],
+      "region": [
+        736,
+        936,
+        1664,
+        2000
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c2.png",
+        "bytes": 4559028,
+        "sha256": "9d324c90907302300e4cfa0b6a0aa0fab3d280923cb444065a9b603be90be4cd"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c2.json",
+        "bytes": 986,
+        "sha256": "f81eb411db28c8723fe4a5a06a5e2270e709adb8f41e8b0df8d3a53eedfa5700"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c2.machine.json",
+        "bytes": 53027,
+        "sha256": "9fd1622bb81fcb26fc7a7f066f77e8424d459509a1db19d563eb342ca58dfb29"
+      }
+    },
+    {
+      "id": "r2-c3",
+      "core": [
+        1600,
+        1000,
+        2400,
+        2000
+      ],
+      "region": [
+        1536,
+        936,
+        2464,
+        2000
+      ],
+      "dimensions": [
+        928,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c3.png",
+        "bytes": 4656477,
+        "sha256": "b370ff2bf0332fe97f4f7d1e60d78205b12a92cbdfcb84b29a5432b02cb3e340"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c3.json",
+        "bytes": 987,
+        "sha256": "e78e7f9f098b3b23e30a0768f7cbc0cf8b7107406e08cb762358b50a4fd2fd62"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c3.machine.json",
+        "bytes": 66133,
+        "sha256": "389603403739db3752754e2a302ec939399736d37ca018e842fba361eee9b7af"
+      }
+    },
+    {
+      "id": "r2-c4",
+      "core": [
+        2400,
+        1000,
+        3200,
+        2000
+      ],
+      "region": [
+        2336,
+        936,
+        3200,
+        2000
+      ],
+      "dimensions": [
+        864,
+        1064
+      ],
+      "channels": 3,
+      "dtype": "uint16",
+      "sourceBlendSha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98",
+      "png": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c4.png",
+        "bytes": 4144758,
+        "sha256": "d97b1903ddb5b1ed3edc972ea76751d18fdc34db3719e97dc695916d0a590c8b"
+      },
+      "metadata": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c4.json",
+        "bytes": 987,
+        "sha256": "e8f6867905cac32cb4c6b1baa3a5930631f3869970b159463ae91c043de9136a"
+      },
+      "machine": {
+        "path": ".workspace/architecture-worlds/checkpoints/strata-wide/regions/29e94bddc6fc81b7-78d0968a644f4755/r2-c4.machine.json",
+        "bytes": 51900,
+        "sha256": "dfe32cd15d39ff7d16500b968a77afa39ec11d48b7ff58a7c40aaa5542d74f95"
+      }
+    }
+  ],
+  "overscanPixels": 64,
+  "coreGrid": [
+    4,
+    2
+  ],
+  "construction": {
+    "blend": {
+      "path": ".workspace/architecture-worlds/strata-wide-final.blend",
+      "bytes": 49325088,
+      "sha256": "78d0968a644f47558a32d4cea3b8b8a6af3d425d6db3269a5d17a3808314ca98"
+    },
+    "metadata": {
+      "path": ".workspace/architecture-worlds/checkpoints/strata-wide/construction-history/29e94bddc6fc81b7-29548ca6/construction.json",
+      "bytes": 2000,
+      "sha256": "f7c37fd5abdf0f4c620f89f7fafa22e2de124d73d29fcc7a360cfe051906b982"
+    },
+    "machine": {
+      "path": ".workspace/architecture-worlds/checkpoints/strata-wide/construction-history/29e94bddc6fc81b7-29548ca6/construction.machine.json",
+      "bytes": 1540,
+      "sha256": "f23740fafbbf02f708d4ebb1fbce26221247fb1f8091b6a5d96a605295a247c0"
+    }
+  },
+  "assembledAt": "2026-10-04T13:53:16.030216+00:00",
+  "colorMetadata": [
+    {
+      "type": "sRGB",
+      "sha256": "711c4ff49da83dd7f14b0800b6ad4f7df58e6d66545525e83e14ba3992da0d69"
+    },
+    {
+      "type": "gAMA",
+      "sha256": "38ad77a09221cff71e5ca575333e576de71e0007f4d370083d8005dce15017d5"
+    },
+    {
+      "type": "cHRM",
+      "sha256": "68765597c7f1e0610c20028a6e9a7080d200ae493389fb5147ad186697ea4db5"
+    }
+  ]
+}
