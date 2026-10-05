@@ -815,33 +815,32 @@ export function App() {
   const [tucked, setTucked] = useState(false);
   const path = route.split("?")[0] ?? "/";
 
-  // At the top of the home page the hero's controls end just above the fold, where the fixed
-  // motion switch lives. While it would actually cover them it steps aside (still focusable,
-  // shown on focus); once the hero pins after a short scroll the switch returns.
+  // The fixed motion switch never sits on another control: the hero's finishes and views at the
+  // fold, the gallery's view buttons, any link or field. While it would cover one it steps
+  // aside (still focusable, shown on focus) and returns once the control has passed.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: a route swaps its controls without scrolling, so re-measure.
   useEffect(() => {
     const pill = motionToggle.current;
-    const blocks =
-      path === "/"
-        ? Array.from(
-            document.querySelectorAll<HTMLElement>(
-              ".has-camera-tour .material-selector, .has-camera-tour .journey-navigation",
-            ),
-          )
-        : [];
-    if (!pill || !blocks.length) {
-      setTucked(false);
-      return;
-    }
+    if (!pill) return;
     let frame = 0;
     const measure = () => {
       frame = 0;
       const a = pill.getBoundingClientRect();
-      setTucked(
-        blocks.some((block) => {
-          const b = block.getBoundingClientRect();
-          return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
-        }),
+      const controls = document.querySelectorAll<HTMLElement>(
+        'a[href], button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])',
       );
+      let covered = false;
+      for (const control of controls) {
+        if (control === pill || pill.contains(control)) continue;
+        const b = control.getBoundingClientRect();
+        // Compact controls only: large linked project cards stay usable around the switch.
+        if (!b.width || !b.height || b.height > 160) continue;
+        if (a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top) {
+          covered = true;
+          break;
+        }
+      }
+      setTucked(covered);
     };
     const schedule = () => {
       if (!frame) frame = requestAnimationFrame(measure);
