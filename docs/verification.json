@@ -1,7 +1,7 @@
 {
   "slug": "19-strata",
   "base": "http://127.0.0.1:4629",
-  "date": "2026-10-03T14:57:11.329Z",
+  "date": "2026-10-05T10:44:15.207Z",
   "checks": [
     {
       "name": "1440 #/ no overflow",
@@ -299,7 +299,9 @@
       "width": 1440,
       "route": "#/",
       "title": "STRATA — Good spaces. Great surfaces.",
-      "headings": ["Good spaces.Great surfaces."],
+      "headings": [
+        "Good spaces.Great surfaces."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -307,7 +309,9 @@
       "width": 1440,
       "route": "#/work",
       "title": "STRATA — Selected projects",
-      "headings": ["Built ongood ideas."],
+      "headings": [
+        "Built ongood ideas."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -315,7 +319,9 @@
       "width": 1440,
       "route": "#/materials",
       "title": "STRATA — The material library",
-      "headings": ["Feel thedifference."],
+      "headings": [
+        "Feel thedifference."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -323,7 +329,9 @@
       "width": 1440,
       "route": "#/studio",
       "title": "STRATA — The studio",
-      "headings": ["The finishis the feeling."],
+      "headings": [
+        "The finishis the feeling."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -331,7 +339,9 @@
       "width": 1440,
       "route": "#/brief",
       "title": "STRATA — Build your project brief",
-      "headings": ["Let's give itsome shape."],
+      "headings": [
+        "Let's give itsome shape."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -339,7 +349,9 @@
       "width": 1440,
       "route": "#/work/the-courtyard-house",
       "title": "STRATA — The Courtyard House",
-      "headings": ["The Courtyard House"],
+      "headings": [
+        "The Courtyard House"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -347,7 +359,9 @@
       "width": 1440,
       "route": "#/work/a-place-to-gather",
       "title": "STRATA — A Place to Gather",
-      "headings": ["A Place to Gather"],
+      "headings": [
+        "A Place to Gather"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -355,7 +369,9 @@
       "width": 1440,
       "route": "#/work/the-quiet-corner",
       "title": "STRATA — The Quiet Corner",
-      "headings": ["The Quiet Corner"],
+      "headings": [
+        "The Quiet Corner"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -363,7 +379,9 @@
       "width": 390,
       "route": "#/",
       "title": "STRATA — Good spaces. Great surfaces.",
-      "headings": ["Good spaces.Great surfaces."],
+      "headings": [
+        "Good spaces.Great surfaces."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -371,7 +389,9 @@
       "width": 390,
       "route": "#/work",
       "title": "STRATA — Selected projects",
-      "headings": ["Built ongood ideas."],
+      "headings": [
+        "Built ongood ideas."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -379,7 +399,9 @@
       "width": 390,
       "route": "#/materials",
       "title": "STRATA — The material library",
-      "headings": ["Feel thedifference."],
+      "headings": [
+        "Feel thedifference."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -387,7 +409,9 @@
       "width": 390,
       "route": "#/studio",
       "title": "STRATA — The studio",
-      "headings": ["The finishis the feeling."],
+      "headings": [
+        "The finishis the feeling."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -395,7 +419,9 @@
       "width": 390,
       "route": "#/brief",
       "title": "STRATA — Build your project brief",
-      "headings": ["Let's give itsome shape."],
+      "headings": [
+        "Let's give itsome shape."
+      ],
       "broken": [],
       "overflow": false
     },
@@ -403,7 +429,9 @@
       "width": 390,
       "route": "#/work/the-courtyard-house",
       "title": "STRATA — The Courtyard House",
-      "headings": ["The Courtyard House"],
+      "headings": [
+        "The Courtyard House"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -411,7 +439,9 @@
       "width": 390,
       "route": "#/work/a-place-to-gather",
       "title": "STRATA — A Place to Gather",
-      "headings": ["A Place to Gather"],
+      "headings": [
+        "A Place to Gather"
+      ],
       "broken": [],
       "overflow": false
     },
@@ -419,7 +449,9 @@
       "width": 390,
       "route": "#/work/the-quiet-corner",
       "title": "STRATA — The Quiet Corner",
-      "headings": ["The Quiet Corner"],
+      "headings": [
+        "The Quiet Corner"
+      ],
       "broken": [],
       "overflow": false
     }
@@ -450,7 +482,7 @@
     {
       "ready": true,
       "fallback": false,
-      "frames": 6,
+      "frames": 5,
       "active": false,
       "visible": true,
       "material": "aluminium",
@@ -465,12 +497,26 @@
         "rotation": 0.06000000000000005,
         "lift": 0.42999999999999994,
         "spread": 0.55
+      },
+      "camera": {
+        "position": [
+          6,
+          3.45,
+          9
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "progress": 0,
+        "projection": "perspective"
       }
     },
     {
       "ready": true,
       "fallback": false,
-      "frames": 6,
+      "frames": 5,
       "active": false,
       "visible": false,
       "material": "aluminium",
@@ -485,6 +531,20 @@
         "rotation": 0.06000000000000005,
         "lift": 0.42999999999999994,
         "spread": 0.55
+      },
+      "camera": {
+        "position": [
+          6,
+          3.45,
+          9
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "progress": 0,
+        "projection": "perspective"
       }
     }
   ],

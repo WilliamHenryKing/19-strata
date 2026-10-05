@@ -9,3 +9,7 @@ Its one warning identified a navigation underline animating `width`. The underli
 The journey, hero layout and accessibility corrections justified one more manual scan. Impeccable `context` reported `SCOPED_EXISTING_ALLOWED`; `impeccable detect --json src` returned no findings. `impeccable-detect.json` now holds this output.
 
 The scan is mechanical evidence only. It does not certify visual quality, responsive behavior, keyboard access or acceptance; those need the separate browser receipts.
+
+## Third pass — 5 October 2026
+
+The release review changed `src/App.tsx` (the motion switch). One more manual scan of the released source returned no findings; `impeccable-detect.json` now holds this output.

@@ -46,3 +46,11 @@ A fresh root agent resumed this work from the cold handover. Read-only reviews a
 - **Accessibility and resilience.** The h1 no longer leaves the accessibility tree mid-journey. View jumps are announced. The motion switch keeps one accessible name with `aria-pressed`. A lost WebGL context shows the material fallback and a restored one rebuilds the reflection map and returns the pin. Unmounting releases the GL context promptly. Per-frame diagnostic allocations are removed.
 
 These interim probes are not release QA: they predate the final renders and build. The detector second pass is in [IMPECCABLE-DETECTOR.md](IMPECCABLE-DETECTOR.md).
+
+## Final renders and release review — 5 October 2026
+
+The final 3200 × 2000 CUDA masters are delivered to the render gallery as responsive WebPs (`strata-world`, `strata-material-study`); the packed source, reconstruction tools and render evidence are described in [RENDERING.md](RENDERING.md). Release QA ran against the final production build in installed Chrome on the GPU.
+
+- **The motion switch covered the gallery.** It stepped aside only for the hero's finishes and views, so at desktop sizes it sat on the gallery's "The detail" button whenever the caption reached the fold. It now steps aside on every route while it would cover any compact button, link or field (large linked project cards stay usable around it) and still appears on keyboard focus. A scan of home, work and materials at five viewport and motion settings found no position where the visible switch overlaps a control; it steps aside at only a few scroll positions per route. Real-viewport captures show both buttons clear at the fold and the switch back once the caption passes.
+
+The harness's gallery element capture is taller than its viewport, so Playwright enlarges the viewport for it and fixed elements (the skip link and the switch) appear displaced there; real-viewport captures were used for that judgement. Final receipts: 68 browser, 46 refinement and 39 camera checks against the build recorded in [RELEASE.md](RELEASE.md). The third detector pass is in [IMPECCABLE-DETECTOR.md](IMPECCABLE-DETECTOR.md).

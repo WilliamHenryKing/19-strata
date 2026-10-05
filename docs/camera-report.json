@@ -1,0 +1,1860 @@
+{
+  "slug": "19-strata",
+  "base": "http://127.0.0.1:4629",
+  "date": "2026-10-05T10:45:15.839Z",
+  "checks": [
+    {
+      "name": "1440x900 chapter0 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 249,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 0.0000017092140984439083,
+          "spread": 8.546070492219542e-7
+        },
+        "camera": {
+          "position": [
+            6,
+            3.45,
+            9
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "progress": 0,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "1440x900 chapter1 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 478,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 1.6476100856064026e-11,
+          "spread": 8.238050428032013e-12
+        },
+        "camera": {
+          "position": [
+            -2.7376988333864674,
+            1.2180069243971647,
+            5.558128259109112
+          ],
+          "target": [
+            -0.14212273093444958,
+            -0.020658900761253027,
+            -0.13989227382609482
+          ],
+          "progress": 0.460247,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "1440x900 chapter2 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 702,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 2.1389561648318182e-16,
+          "spread": 1.0694780824159091e-16
+        },
+        "camera": {
+          "position": [
+            3.399999999999999,
+            1.1000000000000003,
+            3.5
+          ],
+          "target": [
+            1.25,
+            0.05999999999999983,
+            0.10000000000000002
+          ],
+          "progress": 1,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "1440x900 distinct chapter positions",
+      "pass": true,
+      "detail": [
+        [
+          6,
+          3.45,
+          9
+        ],
+        [
+          -2.7376988333864674,
+          1.2180069243971647,
+          5.558128259109112
+        ],
+        [
+          3.399999999999999,
+          1.1000000000000003,
+          3.5
+        ]
+      ]
+    },
+    {
+      "name": "1440x900 native scroll changes camera",
+      "pass": true,
+      "detail": [
+        {
+          "ready": true,
+          "fallback": false,
+          "frames": 804,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 1.1879210817674893e-18,
+            "spread": 5.939605408837447e-19
+          },
+          "camera": {
+            "position": [
+              3.581777411908556,
+              3.2681291984912786,
+              8.698796953843239
+            ],
+            "target": [
+              -0.05707900233938403,
+              0.029319291625280755,
+              -0.08069483613325046
+            ],
+            "progress": 0.049877,
+            "projection": "perspective"
+          }
+        },
+        {
+          "ready": true,
+          "fallback": false,
+          "frames": 909,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 6.310784960285039e-21,
+            "spread": 3.1553924801425194e-21
+          },
+          "camera": {
+            "position": [
+              -2.1959607752698265,
+              1.0488939029299504,
+              5.298253609365772
+            ],
+            "target": [
+              -0.09956906671548703,
+              -0.050255876879314224,
+              -0.09968912581239484
+            ],
+            "progress": 0.500247,
+            "projection": "perspective"
+          }
+        },
+        {
+          "ready": true,
+          "fallback": false,
+          "frames": 1014,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 3.2495946133749573e-23,
+            "spread": 1.6247973066874787e-23
+          },
+          "camera": {
+            "position": [
+              3.38205959617112,
+              1.0104200681185935,
+              3.705834657626712
+            ],
+            "target": [
+              1.1317466287225662,
+              -0.020886843786272286,
+              0.10283852029137483
+            ],
+            "progress": 0.950123,
+            "projection": "perspective"
+          }
+        }
+      ]
+    },
+    {
+      "name": "1440x900 bounded timing sample collected",
+      "pass": true,
+      "detail": {
+        "durationMs": 5003.9,
+        "samples": 649,
+        "medianMs": 7.799999999999272,
+        "p95Ms": 8.299999999999272,
+        "maxMs": 9.200000000000728,
+        "gapsAbove50ms": 0
+      }
+    },
+    {
+      "name": "1440x900 motion-off static camera",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1737,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              3.399999999999999,
+              1.1000000000000003,
+              3.5
+            ],
+            "target": [
+              1.25,
+              0.05999999999999983,
+              0.10000000000000002
+            ],
+            "progress": 1,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1737,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              3.399999999999999,
+              1.1000000000000003,
+              3.5
+            ],
+            "target": [
+              1.25,
+              0.05999999999999983,
+              0.10000000000000002
+            ],
+            "progress": 1,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "1440x900 motion-off composition selected",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 1738,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": false,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 0,
+          "spread": 0
+        },
+        "camera": {
+          "position": [
+            6,
+            3.45,
+            9
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "progress": 0,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "1440x900 motion-off manual selection changes camera",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1738,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              6,
+              3.45,
+              9
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "progress": 0,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1739,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              -2.741145416845181,
+              1.2192042337095654,
+              5.559932980068298
+            ],
+            "target": [
+              -0.14236825763332428,
+              -0.02046190610322554,
+              -0.14018051055304342
+            ],
+            "progress": 0.46,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "1440x900 manual pose survives scrolling",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1739,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              -2.741145416845181,
+              1.2192042337095654,
+              5.559932980068298
+            ],
+            "target": [
+              -0.14236825763332428,
+              -0.02046190610322554,
+              -0.14018051055304342
+            ],
+            "progress": 0.46,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1739,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              -2.741145416845181,
+              1.2192042337095654,
+              5.559932980068298
+            ],
+            "target": [
+              -0.14236825763332428,
+              -0.02046190610322554,
+              -0.14018051055304342
+            ],
+            "progress": 0.46,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "1440x900 keyboard skip focuses its destination",
+      "pass": true,
+      "detail": {
+        "tag": "H2",
+        "class": "",
+        "text": "Spaces with substance."
+      }
+    },
+    {
+      "name": "1440x900 journey pin exists before route cleanup",
+      "pass": true
+    },
+    {
+      "name": "1440x900 route removes canvas",
+      "pass": true
+    },
+    {
+      "name": "1440x900 scene disposal diagnosed",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 1766,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": true,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 0,
+          "spread": 0
+        },
+        "camera": {
+          "position": [
+            1.4151057661460862,
+            0.625898418230095,
+            4.8681305280727765
+          ],
+          "target": [
+            0.32872070131596676,
+            -0.24899812739615929,
+            0.046229060488027225
+          ],
+          "progress": 0.65037,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "1440x900 route cleanup removes journey pin spacer",
+      "pass": true
+    },
+    {
+      "name": "1440x900 system reduced motion static",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 2,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              6,
+              3.45,
+              9
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "progress": 0,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 2,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              6,
+              3.45,
+              9
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "progress": 0,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "390x844 chapter0 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 281,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 4.802654405979699e-7,
+          "spread": 2.4013272029898494e-7
+        },
+        "camera": {
+          "position": [
+            6.959999999999999,
+            4.002,
+            10.44
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "progress": 0,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "390x844 chapter1 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 504,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 6.349403668026175e-12,
+          "spread": 3.1747018340130876e-12
+        },
+        "camera": {
+          "position": [
+            -3.161502453800537,
+            1.4191138598780557,
+            6.474414433230201
+          ],
+          "target": [
+            -0.14265030059281825,
+            -0.020235228935770455,
+            -0.14051242196350855
+          ],
+          "progress": 0.459716,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "390x844 chapter2 valid camera",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 726,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 32,
+        "triangles": 21018,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 8.432582146702671e-17,
+          "spread": 4.2162910733513355e-17
+        },
+        "camera": {
+          "position": [
+            3.743999999999999,
+            1.2664000000000004,
+            4.044
+          ],
+          "target": [
+            1.25,
+            0.05999999999999983,
+            0.10000000000000002
+          ],
+          "progress": 1,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "390x844 distinct chapter positions",
+      "pass": true,
+      "detail": [
+        [
+          6.959999999999999,
+          4.002,
+          10.44
+        ],
+        [
+          -3.161502453800537,
+          1.4191138598780557,
+          6.474414433230201
+        ],
+        [
+          3.743999999999999,
+          1.2664000000000004,
+          4.044
+        ]
+      ]
+    },
+    {
+      "name": "390x844 native scroll changes camera",
+      "pass": true,
+      "detail": [
+        {
+          "ready": true,
+          "fallback": false,
+          "frames": 829,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 4.800355041892385e-19,
+            "spread": 2.4001775209461924e-19
+          },
+          "camera": {
+            "position": [
+              4.150189606583998,
+              3.785471798756247,
+              10.102153216050656
+            ],
+            "target": [
+              -0.0573609562739701,
+              0.029469823845229278,
+              -0.08109577340956778
+            ],
+            "progress": 0.050102,
+            "projection": "perspective"
+          }
+        },
+        {
+          "ready": true,
+          "fallback": false,
+          "frames": 934,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 2.3572839042494237e-21,
+            "spread": 1.1786419521247119e-21
+          },
+          "camera": {
+            "position": [
+              -2.5296604794734696,
+              1.2242955832563083,
+              6.161153067641146
+            ],
+            "target": [
+              -0.0994082172076477,
+              -0.050351339651392414,
+              -0.09957339734087367
+            ],
+            "progress": 0.500339,
+            "projection": "perspective"
+          }
+        },
+        {
+          "ready": true,
+          "fallback": false,
+          "frames": 1039,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 1.2539270343768822e-23,
+            "spread": 6.269635171884411e-24
+          },
+          "camera": {
+            "position": [
+              3.7421868924535504,
+              1.175000920265972,
+              4.283412484757342
+            ],
+            "target": [
+              1.1312181067216873,
+              -0.021282522241269614,
+              0.1028609675069377
+            ],
+            "progress": 0.949898,
+            "projection": "perspective"
+          }
+        }
+      ]
+    },
+    {
+      "name": "390x844 bounded timing sample collected",
+      "pass": true,
+      "detail": {
+        "durationMs": 5005.799999999999,
+        "samples": 649,
+        "medianMs": 7.700000000000728,
+        "p95Ms": 8.300000000001091,
+        "maxMs": 8.900000000001455,
+        "gapsAbove50ms": 0
+      }
+    },
+    {
+      "name": "390x844 motion-off static camera",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1761,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 32,
+          "triangles": 21018,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              3.743999999999999,
+              1.2664000000000004,
+              4.044
+            ],
+            "target": [
+              1.25,
+              0.05999999999999983,
+              0.10000000000000002
+            ],
+            "progress": 1,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1761,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 32,
+          "triangles": 21018,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              3.743999999999999,
+              1.2664000000000004,
+              4.044
+            ],
+            "target": [
+              1.25,
+              0.05999999999999983,
+              0.10000000000000002
+            ],
+            "progress": 1,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "390x844 motion-off composition selected",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 1762,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": false,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 0,
+          "spread": 0
+        },
+        "camera": {
+          "position": [
+            6.959999999999999,
+            4.002,
+            10.44
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "progress": 0,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "390x844 motion-off manual selection changes camera",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1762,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              6.959999999999999,
+              4.002,
+              10.44
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "progress": 0,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1763,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              -3.1569497623190776,
+              1.417550816079612,
+              6.471951138567713
+            ],
+            "target": [
+              -0.14236825763332428,
+              -0.02046190610322554,
+              -0.14018051055304342
+            ],
+            "progress": 0.46,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "390x844 manual pose survives scrolling",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1763,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              -3.1569497623190776,
+              1.417550816079612,
+              6.471951138567713
+            ],
+            "target": [
+              -0.14236825763332428,
+              -0.02046190610322554,
+              -0.14018051055304342
+            ],
+            "progress": 0.46,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 1763,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              -3.1569497623190776,
+              1.417550816079612,
+              6.471951138567713
+            ],
+            "target": [
+              -0.14236825763332428,
+              -0.02046190610322554,
+              -0.14018051055304342
+            ],
+            "progress": 0.46,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "390x844 keyboard skip focuses its destination",
+      "pass": true,
+      "detail": {
+        "tag": "H2",
+        "class": "",
+        "text": "Spaces with substance."
+      }
+    },
+    {
+      "name": "390x844 journey pin exists before route cleanup",
+      "pass": true
+    },
+    {
+      "name": "390x844 route removes canvas",
+      "pass": true
+    },
+    {
+      "name": "390x844 scene disposal diagnosed",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 1790,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": true,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 0,
+          "spread": 0
+        },
+        "camera": {
+          "position": [
+            3.755245052016173,
+            1.1189494619632159,
+            4.426377855996705
+          ],
+          "target": [
+            1.0630083712893412,
+            -0.07358084969567312,
+            0.10611024927693656
+          ],
+          "progress": 0.920785,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "390x844 route cleanup removes journey pin spacer",
+      "pass": true
+    },
+    {
+      "name": "390x844 system reduced motion static",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 2,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              6.959999999999999,
+              4.002,
+              10.44
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "progress": 0,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 2,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": false,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0,
+            "spread": 0
+          },
+          "camera": {
+            "position": [
+              6.959999999999999,
+              4.002,
+              10.44
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "progress": 0,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "390x700-to-844 short viewport has no journey pin",
+      "pass": true
+    },
+    {
+      "name": "390x700-to-844 short viewport manual view changes camera",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 140,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 0.0004905776985630417,
+            "spread": 0.00024528884928152084
+          },
+          "camera": {
+            "position": [
+              6,
+              3.45,
+              9
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "progress": 0,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 303,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 1.3644736724236907e-7,
+            "spread": 6.822368362118453e-8
+          },
+          "camera": {
+            "position": [
+              -2.741145416845181,
+              1.2192042337095654,
+              5.559932980068298
+            ],
+            "target": [
+              -0.14236825763332428,
+              -0.02046190610322554,
+              -0.14018051055304342
+            ],
+            "progress": 0.46,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "390x700-to-844 resize begins during manual camera tween",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "fallback": false,
+        "frames": 332,
+        "active": true,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 2.9549168921288834e-8,
+          "spread": 1.4774584460644417e-8
+        },
+        "camera": {
+          "position": [
+            -2.4544258603937825,
+            1.1246574317541254,
+            5.416179092073277
+          ],
+          "target": [
+            -0.12097754906234472,
+            -0.03647913355577019,
+            -0.11750146494632827
+          ],
+          "progress": 0.480793,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "name": "390x700-to-844 tall viewport creates journey pin",
+      "pass": true
+    },
+    {
+      "name": "390x700-to-844 scroll owns camera after interrupted manual tween",
+      "pass": true,
+      "detail": {
+        "resized": {
+          "ready": true,
+          "fallback": false,
+          "frames": 481,
+          "active": true,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 1.3872071365743956e-11,
+            "spread": 6.936035682871978e-12
+          },
+          "camera": {
+            "position": [
+              -5.153079191793733,
+              2.412380585750538,
+              7.991904857898952
+            ],
+            "target": [
+              -0.2433536951830348,
+              0.0966772554832709,
+              -0.32357990279969656
+            ],
+            "progress": 0.310088,
+            "projection": "perspective"
+          }
+        },
+        "retained": {
+          "ready": true,
+          "fallback": false,
+          "frames": 482,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 1.3177720525556646e-11,
+            "spread": 6.588860262778323e-12
+          },
+          "camera": {
+            "position": [
+              -5.153079191793733,
+              2.412380585750538,
+              7.991904857898952
+            ],
+            "target": [
+              -0.2433536951830348,
+              0.0966772554832709,
+              -0.32357990279969656
+            ],
+            "progress": 0.310088,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "390x700-to-844 resized native journey continues",
+      "pass": true,
+      "detail": {
+        "before": {
+          "ready": true,
+          "fallback": false,
+          "frames": 482,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 1.3177720525556646e-11,
+            "spread": 6.588860262778323e-12
+          },
+          "camera": {
+            "position": [
+              -5.153079191793733,
+              2.412380585750538,
+              7.991904857898952
+            ],
+            "target": [
+              -0.2433536951830348,
+              0.0966772554832709,
+              -0.32357990279969656
+            ],
+            "progress": 0.310088,
+            "projection": "perspective"
+          }
+        },
+        "after": {
+          "ready": true,
+          "fallback": false,
+          "frames": 591,
+          "active": false,
+          "visible": true,
+          "material": "travertine",
+          "motion": true,
+          "dpr": 1,
+          "geometries": 17,
+          "textures": 8,
+          "drawCalls": 33,
+          "triangles": 21306,
+          "disposed": false,
+          "pose": {
+            "rotation": -0.26,
+            "lift": 5.250190791960961e-14,
+            "spread": 2.6250953959804805e-14
+          },
+          "camera": {
+            "position": [
+              3.608626769405859,
+              0.8369789164560157,
+              5.203361711512342
+            ],
+            "target": [
+              0.6504363522869506,
+              -0.29994868361256716,
+              0.10006014142421073
+            ],
+            "progress": 0.750169,
+            "projection": "perspective"
+          }
+        }
+      }
+    },
+    {
+      "name": "no browser or HTTP errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "chapter": 0,
+      "file": "camera-1440x900-chapter-0.png",
+      "diagnostics": {
+        "ready": true,
+        "fallback": false,
+        "frames": 249,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 0.0000017092140984439083,
+          "spread": 8.546070492219542e-7
+        },
+        "camera": {
+          "position": [
+            6,
+            3.45,
+            9
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "progress": 0,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "chapter": 1,
+      "file": "camera-1440x900-chapter-1.png",
+      "diagnostics": {
+        "ready": true,
+        "fallback": false,
+        "frames": 478,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 1.6476100856064026e-11,
+          "spread": 8.238050428032013e-12
+        },
+        "camera": {
+          "position": [
+            -2.7376988333864674,
+            1.2180069243971647,
+            5.558128259109112
+          ],
+          "target": [
+            -0.14212273093444958,
+            -0.020658900761253027,
+            -0.13989227382609482
+          ],
+          "progress": 0.460247,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "chapter": 2,
+      "file": "camera-1440x900-chapter-2.png",
+      "diagnostics": {
+        "ready": true,
+        "fallback": false,
+        "frames": 702,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 2.1389561648318182e-16,
+          "spread": 1.0694780824159091e-16
+        },
+        "camera": {
+          "position": [
+            3.399999999999999,
+            1.1000000000000003,
+            3.5
+          ],
+          "target": [
+            1.25,
+            0.05999999999999983,
+            0.10000000000000002
+          ],
+          "progress": 1,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "chapter": 0,
+      "file": "camera-390x844-chapter-0.png",
+      "diagnostics": {
+        "ready": true,
+        "fallback": false,
+        "frames": 281,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 4.802654405979699e-7,
+          "spread": 2.4013272029898494e-7
+        },
+        "camera": {
+          "position": [
+            6.959999999999999,
+            4.002,
+            10.44
+          ],
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "progress": 0,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "chapter": 1,
+      "file": "camera-390x844-chapter-1.png",
+      "diagnostics": {
+        "ready": true,
+        "fallback": false,
+        "frames": 504,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 33,
+        "triangles": 21306,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 6.349403668026175e-12,
+          "spread": 3.1747018340130876e-12
+        },
+        "camera": {
+          "position": [
+            -3.161502453800537,
+            1.4191138598780557,
+            6.474414433230201
+          ],
+          "target": [
+            -0.14265030059281825,
+            -0.020235228935770455,
+            -0.14051242196350855
+          ],
+          "progress": 0.459716,
+          "projection": "perspective"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "chapter": 2,
+      "file": "camera-390x844-chapter-2.png",
+      "diagnostics": {
+        "ready": true,
+        "fallback": false,
+        "frames": 726,
+        "active": false,
+        "visible": true,
+        "material": "travertine",
+        "motion": true,
+        "dpr": 1,
+        "geometries": 17,
+        "textures": 8,
+        "drawCalls": 32,
+        "triangles": 21018,
+        "disposed": false,
+        "pose": {
+          "rotation": -0.26,
+          "lift": 8.432582146702671e-17,
+          "spread": 4.2162910733513355e-17
+        },
+        "camera": {
+          "position": [
+            3.743999999999999,
+            1.2664000000000004,
+            4.044
+          ],
+          "target": [
+            1.25,
+            0.05999999999999983,
+            0.10000000000000002
+          ],
+          "progress": 1,
+          "projection": "perspective"
+        }
+      }
+    }
+  ],
+  "timing": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "durationMs": 5003.9,
+      "samples": 649,
+      "medianMs": 7.799999999999272,
+      "p95Ms": 8.299999999999272,
+      "maxMs": 9.200000000000728,
+      "gapsAbove50ms": 0
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "durationMs": 5005.799999999999,
+      "samples": 649,
+      "medianMs": 7.700000000000728,
+      "p95Ms": 8.300000000001091,
+      "maxMs": 8.900000000001455,
+      "gapsAbove50ms": 0
+    }
+  ],
+  "limits": "Desktop Chrome emulation and sampled screenshots; no physical-device or universal FPS claim.",
+  "browser": "154.0.8037.97",
+  "passed": true
+}

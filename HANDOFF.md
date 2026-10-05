@@ -1,10 +1,10 @@
-# STRATA refinement handover 4 October 2026
+# STRATA refinement release — 5 October 2026
 
-Production resumed on 4 October at William's request. The camera, accessibility and layout corrections are committed locally on `work/website` and described in [docs/IMPECCABLE-REFINEMENT.md](docs/IMPECCABLE-REFINEMENT.md); they are not yet published. Both STRATA final renders (their scene now carries rebuilt olive, cypress and shrub planting), packaging, final browser/camera QA and the public release are pending, waiting for the shared GPU. The first release below remains the historical verified delivery. See the collection's [refinement handoff](../../ARCHITECTURE-REFINEMENT-HANDOFF.md) for current state.
+**Complete, public and live:** [STRATA](https://19-strata.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/19-strata). Application `eea3162210ece2802678cf0e5b279e14c9dd9aab`, built 2026-10-05T10:44:06Z, passed 68 browser, 46 refinement and 39 camera checks with no axe A/AA violations and was deployed as Cloudflare version `1f059d1a-bf5e-42f9-99b8-c15436932945`. Live verification matched all 18 public files, returned a real 404 and found no desktop or phone overflow. Identities, report hashes and image receipts are in [docs/RELEASE.md](docs/RELEASE.md) and [docs/refinement-release.json](docs/refinement-release.json); the final CUDA renders, packed source and render evidence in [docs/RENDERING.md](docs/RENDERING.md); release-review corrections in [docs/IMPECCABLE-REFINEMENT.md](docs/IMPECCABLE-REFINEMENT.md). Not claimed: physical-device testing, universal frame rates or William's visual acceptance. Later documentation commits do not change the application identity.
 
 # First release — 3 October 2026
 
-**Complete, public and live:** [STRATA](https://19-strata.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/19-strata). All 68 local browser checks and 14 live asset hashes passed; desktop and phone live checks were clean. Exact application commit, Cloudflare version, limits and maintenance commands are in [docs/RELEASE.md](docs/RELEASE.md). Documentation commits after this release do not change its application identity.
+**Complete, public and live:** [STRATA](https://19-strata.williamking.workers.dev) · [source](https://github.com/WilliamHenryKing/19-strata). All 68 local browser checks and 14 live asset hashes passed; desktop and phone live checks were clean. Exact application commit, Cloudflare version, limits and maintenance commands are in [docs/releases/first-2026-10-03/RELEASE.md](docs/releases/first-2026-10-03/RELEASE.md). Documentation commits after this release do not change its application identity.
 
 ## Earlier implementation handoff (historical)
 
